@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Andrew Denta</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <description>Hi! I am Andrew Denta. I make balloons and websites. Feel free to check out my various projects!
 </description>
     <link>http://adenta.github.io/</link>
     <atom:link href="http://adenta.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Mar 2016 22:00:48 -0400</pubDate>
-    <lastBuildDate>Sat, 19 Mar 2016 22:00:48 -0400</lastBuildDate>
+    <pubDate>Fri, 25 Mar 2016 17:26:14 -0400</pubDate>
+    <lastBuildDate>Fri, 25 Mar 2016 17:26:14 -0400</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
-        <title>First Post</title>
-        <description>&lt;p&gt;Hello world! This is my first blog post. Stay tuned for updates on the latest in Technology and Balloon Animals!&lt;/p&gt;
+        <title>Pui Tak Balloons</title>
+        <description>&lt;p&gt;We made a bunch of balloons at the Pui Tak Center!&lt;/p&gt;
 </description>
-        <pubDate>Fri, 11 Mar 2016 12:45:31 -0500</pubDate>
-        <link>http://adenta.github.io/first</link>
-        <guid isPermaLink="true">http://adenta.github.io/first</guid>
+        <pubDate>Thu, 10 Mar 2016 03:45:31 -0500</pubDate>
+        <link>http://adenta.github.io/Pui-Tak</link>
+        <guid isPermaLink="true">http://adenta.github.io/Pui-Tak</guid>
         
         
-        <category>blog</category>
+        <category>balloons</category>
         
       </item>
     
@@ -27,7 +27,7 @@
         <title>Add.ninja</title>
         <description>&lt;p&gt;I wanted to do something about people wanting to support charity, but falling short on contributing. I figured a good solution to this problem would be a website that hosts sponsored content, and gives the proceeds to charity. This way, people would still be able to support charity passively.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 11 Mar 2016 12:45:31 -0500</pubDate>
+        <pubDate>Tue, 09 Feb 2016 12:45:31 -0500</pubDate>
         <link>http://adenta.github.io/addninja</link>
         <guid isPermaLink="true">http://adenta.github.io/addninja</guid>
         
