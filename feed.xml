@@ -6,9 +6,22 @@
 </description>
     <link>http://adenta.github.io/</link>
     <atom:link href="http://adenta.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 25 Mar 2016 17:46:53 -0400</pubDate>
-    <lastBuildDate>Fri, 25 Mar 2016 17:46:53 -0400</lastBuildDate>
+    <pubDate>Sat, 26 Mar 2016 19:46:04 -0400</pubDate>
+    <lastBuildDate>Sat, 26 Mar 2016 19:46:04 -0400</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Exodus Easter Egg Hunt</title>
+        <description>&lt;p&gt;Great time with Exodus Church this morning at 3rd street park here in Bloomington! Not too many pictures, because it was oepn to the public, and they didn’t want me taking pictures of anyone who did not go to the Church.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 26 Mar 2016 13:45:31 -0400</pubDate>
+        <link>http://adenta.github.io/exodus-easter</link>
+        <guid isPermaLink="true">http://adenta.github.io/exodus-easter</guid>
+        
+        
+        <category>balloons</category>
+        
+      </item>
     
       <item>
         <title>Pui Tak Balloons</title>
@@ -20,6 +33,48 @@
         
         
         <category>balloons</category>
+        
+      </item>
+    
+      <item>
+        <title>Feedback</title>
+        <description>&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;I often find myself behind a sound board. I have always enjoyed contributing to any sort of performance through operating sound and lighting equipment. One problem I found myself facing time and time again was that of communication. I would wind up needing to do fifty things at the same time, and would constantly be riddled with requests.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Can you turn me up in the monitors?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Hey Andrew, can you hear me back there? I don’t think my mic is working.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“We have this video we need you to play tonight. It’s on this DVD at the 42 minute mark. We just need thirty seconds from that point.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With many things trying to happen in a short period of time, I thought software might be a way to make my life easier. I spent an evening constructing a very basic MVP, to see if it might work for aggregating feedback from band members as to how well they can hear themselves.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-works&quot;&gt;How It Works&lt;/h2&gt;
+&lt;p&gt;My goal with Feedback was to make it so people in a band can communicate to a sound technician what to change about their dynamics as easily as possible. I used two views, one for the people making requests about wanting to be turned up or down, and another to display this information. I did not focus too much on security for this application, as there was no sensitive information being communicated. Band members select ‘who they are’, and then drag a slider where they want it to be. We can than see all these changes &lt;a href=&quot;feedback-iu.herokuapp.com/admin&quot;&gt;here&lt;/a&gt;. On the admin view, once all requests have been satisfied, you can press the thumbs up emoji button, to let everyone know that you processed their request. This will reset their sliders to the middle position.&lt;/p&gt;
+
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+&lt;p&gt;We tried it out a few times, and it was hard to get people to use the site to log requests as to what they needed. For the time being, it seems the status quo will be here to stay, until I can figure out what the bottleneck is in terms of allowing everyone to tell me what they need done in an orderly fashion.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 28 Feb 2016 03:45:31 -0500</pubDate>
+        <link>http://adenta.github.io/feedback</link>
+        <guid isPermaLink="true">http://adenta.github.io/feedback</guid>
+        
+        
+        <category>project</category>
+        
+        <category>socket.io</category>
+        
+        <category>JQuery</category>
+        
+        <category>JavaScript</category>
+        
+        <category>node</category>
         
       </item>
     

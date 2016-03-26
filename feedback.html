@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Add.ninja</title>
-  <meta name="description" content="I wanted to do something about people wanting to support charity, but falling short on contributing. I figured a good solution to this problem would be a web...">
+  <title>Feedback</title>
+  <meta name="description" content="OverviewI often find myself behind a sound board. I have always enjoyed contributing to any sort of performance through operating sound and lighting equipmen...">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
@@ -17,7 +17,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
   <script  src=" /assets/core.js "></script>
-  <link rel="canonical" href="http://adenta.github.io/addninja">
+  <link rel="canonical" href="http://adenta.github.io/feedback">
   <link rel="alternate" type="application/rss+xml" title="Andrew Denta" href="http://adenta.github.io /feed.xml ">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -74,14 +74,35 @@
 
     <header class="post-header">
       <div class="row">
-        <h1 class="post-title" itemprop="name headline">Add.ninja</h1>
+        <h1 class="post-title" itemprop="name headline">Feedback</h1>
 
       </div>
       <p class="post-meta">
-        <time datetime="2016-02-09T12:45:31-05:00" itemprop="datePublished">Feb 9, 2016</time></p>
+        <time datetime="2016-02-28T03:45:31-05:00" itemprop="datePublished">Feb 28, 2016</time></p>
     </header>
     <div class="post-content" itemprop="articleBody">
-      <p>I wanted to do something about people wanting to support charity, but falling short on contributing. I figured a good solution to this problem would be a website that hosts sponsored content, and gives the proceeds to charity. This way, people would still be able to support charity passively.</p>
+      <h2 id="overview">Overview</h2>
+<p>I often find myself behind a sound board. I have always enjoyed contributing to any sort of performance through operating sound and lighting equipment. One problem I found myself facing time and time again was that of communication. I would wind up needing to do fifty things at the same time, and would constantly be riddled with requests.</p>
+
+<blockquote>
+  <p>“Can you turn me up in the monitors?”</p>
+</blockquote>
+
+<blockquote>
+  <p>“Hey Andrew, can you hear me back there? I don’t think my mic is working.”</p>
+</blockquote>
+
+<blockquote>
+  <p>“We have this video we need you to play tonight. It’s on this DVD at the 42 minute mark. We just need thirty seconds from that point.”</p>
+</blockquote>
+
+<p>With many things trying to happen in a short period of time, I thought software might be a way to make my life easier. I spent an evening constructing a very basic MVP, to see if it might work for aggregating feedback from band members as to how well they can hear themselves.</p>
+
+<h2 id="how-it-works">How It Works</h2>
+<p>My goal with Feedback was to make it so people in a band can communicate to a sound technician what to change about their dynamics as easily as possible. I used two views, one for the people making requests about wanting to be turned up or down, and another to display this information. I did not focus too much on security for this application, as there was no sensitive information being communicated. Band members select ‘who they are’, and then drag a slider where they want it to be. We can than see all these changes <a href="feedback-iu.herokuapp.com/admin">here</a>. On the admin view, once all requests have been satisfied, you can press the thumbs up emoji button, to let everyone know that you processed their request. This will reset their sliders to the middle position.</p>
+
+<h2 id="results">Results</h2>
+<p>We tried it out a few times, and it was hard to get people to use the site to log requests as to what they needed. For the time being, it seems the status quo will be here to stay, until I can figure out what the bottleneck is in terms of allowing everyone to tell me what they need done in an orderly fashion.</p>
 
     </div>
 
@@ -90,7 +111,7 @@
   <div class=" col s12 m4 valign">
     <div class="card">
       <div class="card-image">
-        <img class="img-responsive" src="/assets/images/addninja.png">
+        <img class="img-responsive" src="/assets/images/feedback.png">
       </div>
 
     </div>
