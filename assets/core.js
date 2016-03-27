@@ -5,11 +5,14 @@ var toast = function(msg) {
 $( document ).ready(function(){
   $(".button-collapse").sideNav();
 
-    var $container = $('#masonry-grid');
-    // initialize
-    $container.masonry({
-      columnWidth: '.topCol',
-      itemSelector: '.topCol',
-    });
-
 });
+
+window.onload = function(){
+  var $container = $('#masonry-grid');
+  // initialize
+  $container.masonry({
+    columnWidth: '.topCol',
+    itemSelector: '.topCol',
+  });
+  
+};
