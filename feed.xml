@@ -6,8 +6,8 @@
 </description>
     <link>http://adenta.github.io/</link>
     <atom:link href="http://adenta.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Mar 2016 21:34:57 -0400</pubDate>
-    <lastBuildDate>Sat, 26 Mar 2016 21:34:57 -0400</lastBuildDate>
+    <pubDate>Sat, 26 Mar 2016 22:01:42 -0400</pubDate>
+    <lastBuildDate>Sat, 26 Mar 2016 22:01:42 -0400</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -17,6 +17,19 @@
         <pubDate>Sat, 26 Mar 2016 13:45:31 -0400</pubDate>
         <link>http://adenta.github.io/exodus-easter</link>
         <guid isPermaLink="true">http://adenta.github.io/exodus-easter</guid>
+        
+        
+        <category>balloons</category>
+        
+      </item>
+    
+      <item>
+        <title>Chicago Restoration Ministries</title>
+        <description>&lt;p&gt;We made a bunch of balloons at the Restoration Ministries in Harvey, IL!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 11 Mar 2016 03:45:31 -0500</pubDate>
+        <link>http://adenta.github.io/chicago-restoration-ministries</link>
+        <guid isPermaLink="true">http://adenta.github.io/chicago-restoration-ministries</guid>
         
         
         <category>balloons</category>
