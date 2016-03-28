@@ -4,10 +4,10 @@
     <title>Andrew Denta</title>
     <description>Hi! I am Andrew Denta. I make balloons and websites. Feel free to check out my various projects!
 </description>
-    <link>http://adenta.github.io/</link>
-    <atom:link href="http://adenta.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Mar 2016 06:40:29 -0400</pubDate>
-    <lastBuildDate>Sun, 27 Mar 2016 06:40:29 -0400</lastBuildDate>
+    <link>http://denta.co/</link>
+    <atom:link href="http://denta.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 27 Mar 2016 21:33:36 -0400</pubDate>
+    <lastBuildDate>Sun, 27 Mar 2016 21:33:36 -0400</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -15,8 +15,8 @@
         <description>&lt;p&gt;Great time with Exodus Church this morning at 3rd street park here in Bloomington! Not too many pictures, because it was oepn to the public, and they didn’t want me taking pictures of anyone who did not go to the Church.&lt;/p&gt;
 </description>
         <pubDate>Sat, 26 Mar 2016 13:45:31 -0400</pubDate>
-        <link>http://adenta.github.io/exodus-easter</link>
-        <guid isPermaLink="true">http://adenta.github.io/exodus-easter</guid>
+        <link>http://denta.co/exodus-easter</link>
+        <guid isPermaLink="true">http://denta.co/exodus-easter</guid>
         
         
         <category>balloons</category>
@@ -28,8 +28,8 @@
         <description>&lt;p&gt;We made a bunch of balloons at the Restoration Ministries in Harvey, IL!&lt;/p&gt;
 </description>
         <pubDate>Fri, 11 Mar 2016 03:45:31 -0500</pubDate>
-        <link>http://adenta.github.io/chicago-restoration-ministries</link>
-        <guid isPermaLink="true">http://adenta.github.io/chicago-restoration-ministries</guid>
+        <link>http://denta.co/chicago-restoration-ministries</link>
+        <guid isPermaLink="true">http://denta.co/chicago-restoration-ministries</guid>
         
         
         <category>balloons</category>
@@ -41,8 +41,8 @@
         <description>&lt;p&gt;We made a bunch of balloons at the Pui Tak Center!&lt;/p&gt;
 </description>
         <pubDate>Thu, 10 Mar 2016 03:45:31 -0500</pubDate>
-        <link>http://adenta.github.io/Pui-Tak</link>
-        <guid isPermaLink="true">http://adenta.github.io/Pui-Tak</guid>
+        <link>http://denta.co/Pui-Tak</link>
+        <guid isPermaLink="true">http://denta.co/Pui-Tak</guid>
         
         
         <category>balloons</category>
@@ -75,8 +75,8 @@
 &lt;p&gt;We tried it out a few times, and it was hard to get people to use the site to log requests as to what they needed. For the time being, it seems the status quo will be here to stay, until I can figure out what the bottleneck is in terms of allowing everyone to tell me what they need done in an orderly fashion.&lt;/p&gt;
 </description>
         <pubDate>Sun, 28 Feb 2016 03:45:31 -0500</pubDate>
-        <link>http://adenta.github.io/feedback</link>
-        <guid isPermaLink="true">http://adenta.github.io/feedback</guid>
+        <link>http://denta.co/feedback</link>
+        <guid isPermaLink="true">http://denta.co/feedback</guid>
         
         
         <category>project</category>
@@ -96,8 +96,8 @@
         <description>&lt;p&gt;I wanted to do something about people wanting to support charity, but falling short on contributing. I figured a good solution to this problem would be a website that hosts sponsored content, and gives the proceeds to charity. This way, people would still be able to support charity passively.&lt;/p&gt;
 </description>
         <pubDate>Tue, 09 Feb 2016 12:45:31 -0500</pubDate>
-        <link>http://adenta.github.io/addninja</link>
-        <guid isPermaLink="true">http://adenta.github.io/addninja</guid>
+        <link>http://denta.co/addninja</link>
+        <guid isPermaLink="true">http://denta.co/addninja</guid>
         
         
         <category>project</category>
@@ -119,8 +119,8 @@
         <description>&lt;p&gt;Summer 2015, I started getting passionate about how I could use advertising to change the world. After trying to build an alarm clock that woke people up with video ad’s, I decided to make a mobile trivia game. I took an archive of &lt;a href=&quot;http://jservice.io/&quot;&gt;Jeopardy Questions&lt;/a&gt; and filtered out all answers that were not four letters long. Ads only appear if you run out of points. Points are gained by typing in the answers correctly. Points are used to buy hints, which give you one of the letters needed for the correct answer.&lt;/p&gt;
 </description>
         <pubDate>Thu, 20 Aug 2015 09:45:31 -0400</pubDate>
-        <link>http://adenta.github.io/fourletterwords</link>
-        <guid isPermaLink="true">http://adenta.github.io/fourletterwords</guid>
+        <link>http://denta.co/fourletterwords</link>
+        <guid isPermaLink="true">http://denta.co/fourletterwords</guid>
         
         
         <category>project</category>
