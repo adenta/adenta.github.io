@@ -115,7 +115,9 @@
         <span class="k">if</span><span class="p">(</span><span class="n">firstNumber</span> <span class="o">+</span> <span class="n">secondNumber</span> <span class="o">==</span> <span class="n">answerNumber</span><span class="p">):</span>
             <span class="k">print</span> <span class="n">problem</span></code></pre></figure>
 
-<p>The big O would still be in the neighborhood of n!, however; this problem is <a href="https://en.wikipedia.org/wiki/NP-completeness">NP-Complete</a>. Because most solutions will be super hard to arrive at, it makes more sense to solve this problem using brute force, opposed to using a more complex algorithm. This is mostly due to the problem being bounded where n&lt;10, as you can only have that many unique letters representing unique numbers. If this problem was not NP-complete, and unbounded, it would make sense to peruse more advanced algorithms. The highest number of trials one can generate is 362880, because that is the number of permutations of the 9 one digit numbers, of length 10.</p>
+<p>I am happy with the solution I arrived at, other than two small points. I wish I could get out of the habit of thinking of lists in terms of their indexes. You can see on line 37 where I am generating each mapping of numbers to letters, my dictionary comprehension relies on ‘range(len(trial))’. This solution also runs in n! time, but that is just because of how <em>hard</em> of a problem it is.</p>
+
+<p>The big O would still be in the neighborhood of n!, however; this problem is <a href="https://en.wikipedia.org/wiki/NP-completeness">NP-Complete</a> This problem is bounded where n&lt;10, as you can only have that many unique letters representing unique numbers. The highest number of trials one can generate is 362,880, because that is the number of permutations of the 9 one digit numbers, of length 10.</p>
 
   </div>
 
