@@ -119,7 +119,7 @@
 
 <p>I am happy with the solution I arrived at, other than two small points. I wish I could get out of the habit of thinking of lists in terms of their indexes. You can see on line 37 where I am generating each mapping of numbers to letters, my dictionary comprehension relies on ‘range(len(trial))’. This solution also runs in n! time, but that is just because of how <em>hard</em> of a problem it is.</p>
 
-<p>The big O would still be in the neighborhood of n!, however; this problem is <a href="https://en.wikipedia.org/wiki/NP-completeness">NP-Complete</a> This problem is bounded where n&lt;10, as you can only have that many unique letters representing unique numbers. The highest number of trials one can generate is 362,880, because that is the number of permutations of the 9 one digit numbers, of length 10.</p>
+<p>This problem is <a href="https://en.wikipedia.org/wiki/NP-completeness">NP-Complete</a>. This explains why it has such a high complexity. It is important to note that this problem is bounded where n&lt;10, as you can only have that many unique letters representing unique numbers.</p>
 
   </div>
 

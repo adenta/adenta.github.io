@@ -6,8 +6,8 @@
 </description>
     <link>http://denta.co/</link>
     <atom:link href="http://denta.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 31 Mar 2016 08:32:24 -0400</pubDate>
-    <lastBuildDate>Thu, 31 Mar 2016 08:32:24 -0400</lastBuildDate>
+    <pubDate>Thu, 31 Mar 2016 08:34:29 -0400</pubDate>
+    <lastBuildDate>Thu, 31 Mar 2016 08:34:29 -0400</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -53,7 +53,7 @@
 
 &lt;p&gt;I am happy with the solution I arrived at, other than two small points. I wish I could get out of the habit of thinking of lists in terms of their indexes. You can see on line 37 where I am generating each mapping of numbers to letters, my dictionary comprehension relies on ‘range(len(trial))’. This solution also runs in n! time, but that is just because of how &lt;em&gt;hard&lt;/em&gt; of a problem it is.&lt;/p&gt;
 
-&lt;p&gt;The big O would still be in the neighborhood of n!, however; this problem is &lt;a href=&quot;https://en.wikipedia.org/wiki/NP-completeness&quot;&gt;NP-Complete&lt;/a&gt; This problem is bounded where n&amp;lt;10, as you can only have that many unique letters representing unique numbers. The highest number of trials one can generate is 362,880, because that is the number of permutations of the 9 one digit numbers, of length 10.&lt;/p&gt;
+&lt;p&gt;This problem is &lt;a href=&quot;https://en.wikipedia.org/wiki/NP-completeness&quot;&gt;NP-Complete&lt;/a&gt;. This explains why it has such a high complexity. It is important to note that this problem is bounded where n&amp;lt;10, as you can only have that many unique letters representing unique numbers.&lt;/p&gt;
 </description>
         <pubDate>Wed, 30 Mar 2016 21:45:31 -0400</pubDate>
         <link>http://denta.co/sat-solver</link>
