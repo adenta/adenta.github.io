@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sat Solver</title>
+  <meta name="description" content="Today in class my professor was describing this problem. We thought about it for a while, and than he started describing the brute force solution. His code w...">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link type="text/css" rel="stylesheet" href=" /assets/style.css " media="screen,projection">
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script  src=" /assets/core.js "></script>
+  <script  src=" /assets/masonry.js "></script>
+
+  <link rel="canonical" href="http://denta.co/sat-solver">
+  <link rel="alternate" type="application/rss+xml" title="Andrew Denta" href="http://denta.co /feed.xml ">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+
+  <body class="grey lighten-4">
+    <main>
+    <header class="site-header">
+  <nav class="blue">
+    <div class="nav-wrapper container">
+      <a href="http://denta.co" class="brand-logo">Andrew Denta </a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        
+          
+          <li><a class="page-link" href="/about/">About</a></li>
+          
+        
+          
+        
+          
+        
+          
+          <li><a class="page-link" href="/projects/">Projects</a></li>
+          
+        
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        
+          
+        <li>  <a class="page-link" href="/about/">About</a></li>
+          
+        
+          
+        
+          
+        
+          
+        <li>  <a class="page-link" href="/projects/">Projects</a></li>
+          
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+    <div class="container">
+      <div class="wrapper">
+        <article class="post card-panel">
+
+  <header class="post-header">
+    <h1 class="post-title">Sat Solver</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Today in class my professor was describing <a href="http://nrich.maths.org/781/note">this</a> problem. We thought about it for a while, and than he started describing the brute force solution. His code was literally six nested for loops. It made me upset to look at, so I took the liberty to solve the problem in a more sensible fashion.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sets</span> <span class="kn">import</span> <span class="n">Set</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span><span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">Set</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">makeWord</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
+    <span class="n">word</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">word</span>
+    <span class="n">first</span> <span class="o">=</span> <span class="n">makeWord</span><span class="p">(</span><span class="s">" First: "</span><span class="p">)</span>
+    <span class="n">second</span> <span class="o">=</span> <span class="n">makeWord</span><span class="p">(</span><span class="s">"Second: "</span><span class="p">)</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="n">makeWord</span><span class="p">(</span><span class="s">"Answer: "</span><span class="p">)</span>
+
+    <span class="n">probVars</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+    <span class="n">trials</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">probVars</span><span class="p">)))</span>
+    <span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">probVars</span><span class="p">),</span><span class="s">"letters, &amp;"</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">trials</span><span class="p">),</span><span class="s">" permutations."</span>
+    <span class="k">for</span> <span class="n">trial</span> <span class="ow">in</span> <span class="n">trials</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">buildNumber</span><span class="p">(</span><span class="n">nString</span><span class="p">):</span>
+            <span class="n">builtList</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">nString</span><span class="p">:</span>
+                <span class="n">builtList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">problem</span><span class="p">[</span><span class="n">letter</span><span class="p">])</span>
+            <span class="k">return</span> <span class="n">builtList</span>
+
+        <span class="n">problem</span> <span class="o">=</span> <span class="p">{</span><span class="n">probVars</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span><span class="n">trial</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">trial</span><span class="p">))}</span>
+
+        <span class="n">firstNumber</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">buildNumber</span><span class="p">(</span><span class="n">first</span><span class="p">)))</span>
+        <span class="n">secondNumber</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">buildNumber</span><span class="p">(</span><span class="n">second</span><span class="p">)))</span>
+        <span class="n">answerNumber</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">buildNumber</span><span class="p">(</span><span class="n">answer</span><span class="p">)))</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">firstNumber</span> <span class="o">+</span> <span class="n">secondNumber</span> <span class="o">==</span> <span class="n">answerNumber</span><span class="p">):</span>
+            <span class="k">print</span> <span class="n">problem</span></code></pre></figure>
+
+<p>The big O would still be in the neighborhood of n!, however; this problem is <a href="https://en.wikipedia.org/wiki/NP-completeness">NP-Complete</a>. Because most solutions will be super hard to arrive at, it makes more sense to solve this problem using brute force, opposed to using a more complex algorithm. This is mostly due to the problem being bounded where n&lt;10, as you can only have that many unique letters representing unique numbers. If this problem was not NP-complete, and unbounded, it would make sense to peruse more advanced algorithms. The highest number of trials one can generate is 362880, because that is the number of permutations of the 9 one digit numbers, of length 10.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+  </main>
+    <footer class="page-footer blue white-text">
+
+  <div class="container row">
+    <a href="mailto:andrew.denta@gmail.com">andrew.denta@gmail.com</a>
+
+
+
+  </div>
+  <div class="footer-copyright blue darken-3">
+    <div class="container">
+      ©2016 Dent LLC.
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+
+</html>
