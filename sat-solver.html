@@ -4,7 +4,7 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 
   <title>Sat Solver</title>
   <meta name="description" content="Today in class my professor was describing this problem. We thought about it for a while, and than he started describing the brute force solution. His code w...">
@@ -78,10 +78,10 @@
   </header>
 
   <div class="post-content">
-    <p>Today in class my professor was describing <a href="http://nrich.maths.org/781/note">this</a> problem. We thought about it for a while, and than he started describing the brute force solution. His code was literally six nested for loops. It made me upset to look at, so I took the liberty to solve the problem in a more sensible fashion.</p>
+    <p>Today in class my professor was describing <a href="http://nrich.maths.org/781/note">this</a> problem. We thought about it for a while, and than he started describing the brute force solution. His code was six nested for loops. I assumed there had to be a better way to represent this problem, so I wrote a script to solve this and other similar problems.</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sets</span> <span class="kn">import</span> <span class="n">Set</span>
-<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">permutations</span>
 
 <span class="n">numbers</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span><span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>
 <span class="n">s</span> <span class="o">=</span> <span class="n">Set</span><span class="p">()</span>
@@ -98,21 +98,20 @@
 
 <span class="n">probVars</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
-<span class="n">trials</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">probVars</span><span class="p">)))</span>
-<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">probVars</span><span class="p">),</span><span class="s">"letters, &amp;"</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">trials</span><span class="p">),</span><span class="s">" permutations."</span>
-
+<span class="n">trials</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">permutations</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">probVars</span><span class="p">)))</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">probVars</span><span class="p">),</span><span class="s">"letters in total, &amp;"</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">trials</span><span class="p">),</span><span class="s">" permutations."</span>
 <span class="k">for</span> <span class="n">trial</span> <span class="ow">in</span> <span class="n">trials</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">buildNumber</span><span class="p">(</span><span class="n">nString</span><span class="p">):</span>
         <span class="n">builtList</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">nString</span><span class="p">:</span>
             <span class="n">builtList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">problem</span><span class="p">[</span><span class="n">letter</span><span class="p">])</span>
-        <span class="k">return</span> <span class="n">builtList</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="s">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">builtList</span><span class="p">))</span>
 
     <span class="n">problem</span> <span class="o">=</span> <span class="p">{</span><span class="n">probVars</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span><span class="n">trial</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">trial</span><span class="p">))}</span>
 
-    <span class="n">firstNumber</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">buildNumber</span><span class="p">(</span><span class="n">first</span><span class="p">)))</span>
-    <span class="n">secondNumber</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">buildNumber</span><span class="p">(</span><span class="n">second</span><span class="p">)))</span>
-    <span class="n">answerNumber</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">buildNumber</span><span class="p">(</span><span class="n">answer</span><span class="p">)))</span>
+    <span class="n">firstNumber</span> <span class="o">=</span> <span class="n">buildNumber</span><span class="p">(</span><span class="n">first</span><span class="p">)</span>
+    <span class="n">secondNumber</span> <span class="o">=</span> <span class="n">buildNumber</span><span class="p">(</span><span class="n">second</span><span class="p">)</span>
+    <span class="n">answerNumber</span> <span class="o">=</span> <span class="n">buildNumber</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
 
     <span class="k">if</span><span class="p">(</span><span class="n">firstNumber</span> <span class="o">+</span> <span class="n">secondNumber</span> <span class="o">==</span> <span class="n">answerNumber</span><span class="p">):</span>
         <span class="k">print</span> <span class="n">problem</span></code></pre></figure>
