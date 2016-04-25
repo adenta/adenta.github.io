@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 
-  <title>Add.ninja</title>
-  <meta name="description" content="I wanted to do something about people wanting to support charity, but falling short on contributing. I figured a good solution to this problem would be a web...">
+  <title>Add.Ninja</title>
+  <meta name="description" content="The ProjectMany people want to help, but not many end up falling through. We wanted to do something about lowering the barrier of entry to charitable contrib...">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
@@ -76,7 +76,7 @@
 
     <header class="post-header">
       <div class="row">
-        <h1 class="post-title center" itemprop="name headline">Add.ninja</h1>
+        <h1 class="post-title center" itemprop="name headline">Add.Ninja</h1>
 
       </div>
       <div class="row">
@@ -86,7 +86,20 @@
       </div>
     </header>
     <div class="post-content" itemprop="articleBody">
-      <p>I wanted to do something about people wanting to support charity, but falling short on contributing. I figured a good solution to this problem would be a website that hosts sponsored content, and gives the proceeds to charity. This way, people would still be able to support charity passively.</p>
+      <h2 id="the-project">The Project</h2>
+<p>Many people want to help, but not many end up falling through. We wanted to do something about lowering the barrier of entry to charitable contribution. We thought a good solution to this problem would be a website that hosts sponsored content, and gives the proceeds to charity. This way, people would still be able to support charity passively.</p>
+
+<p>We spent some time, and <a href="https://add.ninja">Add.Ninja</a> was born. We find many people believe that it is a good idea, but at the same time have learned how hard media companies are to grow organically. As such, we have been trying to peruse other means of getting people involved, and are hard at work on how to build this platform into something that will be easier to scale.</p>
+
+<h2 id="technical-challenges">Technical Challenges</h2>
+
+<p>The infinite scroll effect took a while to flesh out. I used <a href="https://sroze.github.io/ngInfiniteScroll/">this</a> angular plugin. After setting up the plugin, it took a while to fine tune the mechanics for pulling articles.</p>
+
+<p>We <em>could</em> pull in all of the articles at once, keep them in a buffer, and keep rendering 20 at a time. This worked wonderfully when we only had 200 articles to host on the site. This became a problem when we got to our current scale of 3000+ articles. This especially does not seem like a good idea if you consider that people are not going to read all the articles on a give page.</p>
+
+<p>The alternative was to load the articles in chunks, in real time. When the user would get close to the bottom of the page, they would get another chunk of links. This seemed problematic because it would create the overhead of a bunch of separate HTTP requests.</p>
+
+<p>I ultimately decided on loading the first ‘chunk’ of links, and loading a larger set of links in the background when this was happening. This gives the user their first piece of content quickly, and a bunch more to scroll through, without having to wait when they reach to bottom of the page. Currently, I only am loading one giant chunk of links after the initial front page content. This means if the user looks through all three hundred or so links, they will not be given any more. Future updates to the system could send out another request for a large chunk of links after the first large chunk has been viewed.</p>
 
     </div>
 
@@ -99,7 +112,7 @@
         <img class="img-responsive" src="/assets/images/addninja.png">
       </div>
       <h3 class="card-content flow-text">
-        <a href="https://add.ninja">Check out Add.ninja on the web.
+        <a href="https://add.ninja">Check out Add.Ninja on the web.
 
       </h3>
 

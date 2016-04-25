@@ -6,8 +6,8 @@
 </description>
     <link>http://denta.co/</link>
     <atom:link href="http://denta.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Apr 2016 22:08:04 -0400</pubDate>
-    <lastBuildDate>Thu, 14 Apr 2016 22:08:04 -0400</lastBuildDate>
+    <pubDate>Mon, 25 Apr 2016 10:28:52 -0400</pubDate>
+    <lastBuildDate>Mon, 25 Apr 2016 10:28:52 -0400</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -16,15 +16,15 @@
 
 &lt;p&gt;Last year, Ohio voted for stricter regulation of redistricting, to combat &lt;a href=&quot;http://www.huffingtonpost.com/entry/ohio-gerrymandering_us_563a5c76e4b0411d306f487e&quot;&gt;gerrymandering&lt;/a&gt;. People like to talk about gerrymandering, and how it is a big problem. It is real easy to see how politicians can manipulate the masses when you look at pictures like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/gerrymandering-explained.png&quot; alt=&quot;Gerrymandering in Action&quot; class=&quot;container responsive-img materialboxed&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/gerrymandering-explained.png&quot; alt=&quot;Gerrymandering in Action&quot; class=&quot;responsive-img materialboxed container&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The conversation currently seems to be about how gerrymandering is bad and we need to fix it. I want to know if we can show specific evidence of gerrymandering being abused by political parties. I want to investigate the years that redistricting occurs, and determine if there is evidence to support that the political party in charge of redistricting gains an advantage in coming years. One can expect if a political party is in power, they will remain in power, but we can examine some metrics to see if they are gaining a competitive advantage through redistricting.&lt;/p&gt;
 
 &lt;p&gt;We can find house election data &lt;a href=&quot;http://www.fec.gov/pubrec/electionresults.shtml&quot;&gt;here&lt;/a&gt;. This gives us the elections of 1990, 2000, &amp;amp; 2010 to examine redistricting. For each of the three years, we will look at the makeup of democrat votes vs republican votes. We hypothesize that the party in control of redistricting will be more likely to win the election in the following year. We think we will see the number of districts controlled by the opposing party shrink, and in those districts, the concentration of opposite party members will grow.&lt;/p&gt;
 </description>
         <pubDate>Tue, 12 Apr 2016 02:45:31 -0400</pubDate>
-        <link>http://denta.co/gerrymandering</link>
-        <guid isPermaLink="true">http://denta.co/gerrymandering</guid>
+        <link>http://denta.co/gerrymandering-blog-post</link>
+        <guid isPermaLink="true">http://denta.co/gerrymandering-blog-post</guid>
         
         
         <category>politics</category>
@@ -166,8 +166,21 @@
       </item>
     
       <item>
-        <title>Add.ninja</title>
-        <description>&lt;p&gt;I wanted to do something about people wanting to support charity, but falling short on contributing. I figured a good solution to this problem would be a website that hosts sponsored content, and gives the proceeds to charity. This way, people would still be able to support charity passively.&lt;/p&gt;
+        <title>Add.Ninja</title>
+        <description>&lt;h2 id=&quot;the-project&quot;&gt;The Project&lt;/h2&gt;
+&lt;p&gt;Many people want to help, but not many end up falling through. We wanted to do something about lowering the barrier of entry to charitable contribution. We thought a good solution to this problem would be a website that hosts sponsored content, and gives the proceeds to charity. This way, people would still be able to support charity passively.&lt;/p&gt;
+
+&lt;p&gt;We spent some time, and &lt;a href=&quot;https://add.ninja&quot;&gt;Add.Ninja&lt;/a&gt; was born. We find many people believe that it is a good idea, but at the same time have learned how hard media companies are to grow organically. As such, we have been trying to peruse other means of getting people involved, and are hard at work on how to build this platform into something that will be easier to scale.&lt;/p&gt;
+
+&lt;h2 id=&quot;technical-challenges&quot;&gt;Technical Challenges&lt;/h2&gt;
+
+&lt;p&gt;The infinite scroll effect took a while to flesh out. I used &lt;a href=&quot;https://sroze.github.io/ngInfiniteScroll/&quot;&gt;this&lt;/a&gt; angular plugin. After setting up the plugin, it took a while to fine tune the mechanics for pulling articles.&lt;/p&gt;
+
+&lt;p&gt;We &lt;em&gt;could&lt;/em&gt; pull in all of the articles at once, keep them in a buffer, and keep rendering 20 at a time. This worked wonderfully when we only had 200 articles to host on the site. This became a problem when we got to our current scale of 3000+ articles. This especially does not seem like a good idea if you consider that people are not going to read all the articles on a give page.&lt;/p&gt;
+
+&lt;p&gt;The alternative was to load the articles in chunks, in real time. When the user would get close to the bottom of the page, they would get another chunk of links. This seemed problematic because it would create the overhead of a bunch of separate HTTP requests.&lt;/p&gt;
+
+&lt;p&gt;I ultimately decided on loading the first ‘chunk’ of links, and loading a larger set of links in the background when this was happening. This gives the user their first piece of content quickly, and a bunch more to scroll through, without having to wait when they reach to bottom of the page. Currently, I only am loading one giant chunk of links after the initial front page content. This means if the user looks through all three hundred or so links, they will not be given any more. Future updates to the system could send out another request for a large chunk of links after the first large chunk has been viewed.&lt;/p&gt;
 </description>
         <pubDate>Tue, 09 Feb 2016 12:45:31 -0500</pubDate>
         <link>http://denta.co/addninja</link>
@@ -190,7 +203,39 @@
     
       <item>
         <title>4 letter words.</title>
-        <description>&lt;p&gt;Summer 2015, I started getting passionate about how I could use advertising to change the world. After trying to build an alarm clock that woke people up with video ad’s, I decided to make a mobile trivia game. I took an archive of &lt;a href=&quot;http://jservice.io/&quot;&gt;Jeopardy Questions&lt;/a&gt; and filtered out all answers that were not four letters long. Ads only appear if you run out of points. Points are gained by typing in the answers correctly. Points are used to buy hints, which give you one of the letters needed for the correct answer.&lt;/p&gt;
+        <description>&lt;h3 id=&quot;the-project&quot;&gt;The Project&lt;/h3&gt;
+&lt;p&gt;Summer 2015, I started getting passionate about how I could use advertising to support charity. After trying to build an alarm clock that woke people up with video ad’s, I decided to make a mobile trivia game. I took an archive of &lt;a href=&quot;http://jservice.io/&quot;&gt;Jeopardy Questions&lt;/a&gt; and filtered out all answers that were not four letters long. Ads only appear if you run out of points. Points are gained by typing in the answers correctly. Points are used to buy hints, which give you one of the letters needed for the correct answer.&lt;/p&gt;
+
+&lt;h3 id=&quot;technical-challenges&quot;&gt;Technical Challenges&lt;/h3&gt;
+
+&lt;p&gt;4 letter words was all about learning JavaScript. I approached the project without too much formal experience, and walked away feeling like I knew what I was doing. I mostly used a bunch of static functions to process the flow of the data, when things were clicked on. One thing I was proud of was how I kept a persistent psudorandom set of letters to pick from for each question.&lt;/p&gt;
+
+&lt;p&gt;I believe it would be tedious to serialize &amp;amp; deserialize the contents of what letters are on the screen every time you open the application. To solve this, I just came up with a function that would determine weather to display the letter, given some deterministic properties about the question. This is demonstrated in the named function ‘shouldUse’:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//takes a letter, and returns a boolean.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//Function that takes a letter and determines&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// if that letter should be in the set of&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// letters to pick form.&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;wordContains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//shouldUse:arbitrary function that returns&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// a boolean, indicating if the letter should&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// be used for the word as a decoy, when the&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//letter is not actually in the word.&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;shouldUse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;questionPos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;show_number&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;toTake&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;questionPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;charCodeAt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toTake&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contains&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inWord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;contains&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;shouldUse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lettersUsed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;maxLetters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;lettersUsed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;contains&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 </description>
         <pubDate>Thu, 20 Aug 2015 09:45:31 -0400</pubDate>
         <link>http://denta.co/fourletterwords</link>
