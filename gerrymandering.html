@@ -9,13 +9,14 @@
   <title>Gerrymandering</title>
   <meta name="description" content="The following is an excerpt from a term paper I am working on.">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <link type="text/css" rel="stylesheet" href=" /assets/materialize/sass/materialize.css">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
   <link type="text/css" rel="stylesheet" href=" /assets/style.css " media="screen,projection">
 
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script  src=" /assets/materialize/js/bin/materialize.js "></script>
+  <script  src=" /assets/materialize/js/initial.js"></script>
   <script  src=" /assets/core.js "></script>
   <script  src=" /assets/masonry.js "></script>
 
@@ -30,7 +31,7 @@
   <body class="grey lighten-4">
     <main>
     <header class="site-header">
-  <nav class="blue darken-3">
+  <nav class="">
     <div class="nav-wrapper container">
       <a href="http://denta.co" class="brand-logo">Andrew Denta </a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -38,6 +39,8 @@
         
           
           <li><a class="page-link" href="/about/">About</a></li>
+          
+        
           
         
           
@@ -53,6 +56,8 @@
         
           
         <li>  <a class="page-link" href="/about/">About</a></li>
+          
+        
           
         
           
@@ -80,13 +85,36 @@
   <div class="post-content">
     <p><em>The following is an excerpt from a term paper I am working on.</em></p>
 
-<p>Last year, Ohio voted for stricter regulation of redistricting, to combat <a href="http://www.huffingtonpost.com/entry/ohio-gerrymandering_us_563a5c76e4b0411d306f487e">gerrymandering</a>. People like to talk about gerrymandering, and how it is a big problem. It is real easy to see how politicians can manipulate the masses when you look at pictures like this:</p>
+<p>Every ten years, each of the 50 US states redraws the boundaries for
+congressional districts. The lines are redrawn so all of the districts contain about an equal
+number of people. Each congressional district votes on a person to go to the US House of
+Representatives. As one can imagine, the political districts control a bit of power, which is
+shifted around every time the districts are redrawn. It is commonly believed that whichever
+party is in control of the redistricting process could misuse this ability to redraw districts, and
+rig elections in their favor. This practice is referred to as “gerrymandering.” We can see how
+this might work in this illustration:</p>
 
-<p><img src="/assets/images/gerrymandering-explained.png" alt="Gerrymandering in Action" class="container responsive-img materialboxed" /></p>
+<p><img src="/assets/images/gerrymandering-explained.png" alt="Gerrymandering in Action" class="responsive-img materialboxed" /></p>
 
-<p>The conversation currently seems to be about how gerrymandering is bad and we need to fix it. I want to know if we can show specific evidence of gerrymandering being abused by political parties. I want to investigate the years that redistricting occurs, and determine if there is evidence to support that the political party in charge of redistricting gains an advantage in coming years. One can expect if a political party is in power, they will remain in power, but we can examine some metrics to see if they are gaining a competitive advantage through redistricting.</p>
+<p>I want to see if we can detect gerrymandering when looking at the results of many US elections. The Federal Election Commision (FEC) has a <a href="http://www.fec.gov/pubrec/electionresults.shtml">website</a> that provides historic election results for congressional districts. Unfortunately, The spreadsheets they provide only go back as far as the year 2000, everything provided before that point is a PDF. This gives us eight different elections to look at.</p>
 
-<p>We can find house election data <a href="http://www.fec.gov/pubrec/electionresults.shtml">here</a>. This gives us the elections of 1990, 2000, &amp; 2010 to examine redistricting. For each of the three years, we will look at the makeup of democrat votes vs republican votes. We hypothesize that the party in control of redistricting will be more likely to win the election in the following year. We think we will see the number of districts controlled by the opposing party shrink, and in those districts, the concentration of opposite party members will grow.</p>
+<p>I went through, and scraped as much data as possible from these spreadsheets. They had inconsistent formatting, and I was able to get 97% of the elections into a JSON archive easily.</p>
+
+<p>The most interesting thing I found was the trends that present themselves when looking at gerrymandering on a graph. Below we see the percentage of Republican votes over total votes for state of North Carolina, over time. North Carolina had it’s districts redrawn after a <a href="http://myfox8.com/2016/02/05/federal-court-invalidates-maps-of-north-carolinas-1st-12th-congressional-districts/">widespread reporting</a> of gerrymandering in the 2010 election cycle. We see that the districts cluster around a 60% concentration of Republicans. This is what is most advantageous for the Republicans: maintaining a majority in most states, and losing big in three.</p>
+
+<p><img src="/assets/images/NC-Votes.png" alt="Gerrymandering in Action" class="responsive-img materialboxed" /></p>
+
+<h2 id="what-i-learned">What I learned</h2>
+
+<p>I have tried to make useful things for the open source community before, but always seem to fall short. I will be releasing the repository on github soon, but am not sure how useful it will be to others. When scraping the excel files, about 5% of the data was was not scraped properly. I did not need it for my analysis. It seems the issue was in the order that the political races were listed. If the first race was not the winning race, than my scraper did not return the proper output.</p>
+
+<p>When reading in the votes for each race, There seemed to be four cases. For example, with the number 56789, it might appear:
+ - As a string (eg: “56,789”)
+ - As a list (eg: “[56,789]”)
+ - As a floating point (eg: 56789.0)
+ - As a string saying, “Unopposed”</p>
+
+<p>For my sake, I saved unopposed elections with a flag of 0. I gave missing elections a flag of -1. I see this was a bad decision for others to use my data. I should have saved the flags as strings, leaving unopposed elections alone. This would have been more semantic. This would have also prevented people from doing some bad math, treating the -1’s and 0’s as literal values.</p>
 
   </div>
 
@@ -95,7 +123,7 @@
       </div>
     </div>
   </main>
-    <footer class="page-footer blue darken-3 white-text">
+    <footer class="page-footer ">
 
   <div class="container row">
     <a class="white-text"href="mailto:andrew.denta@gmail.com">andrew.denta@gmail.com</a>
@@ -103,7 +131,7 @@
 
 
   </div>
-  <div class="footer-copyright blue darken-3 ">
+  <div class="footer-copyright">
     <div class="container">
       ©2016 
     </div>

@@ -6,34 +6,48 @@
 </description>
     <link>http://denta.co/</link>
     <atom:link href="http://denta.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 May 2016 21:02:34 -0400</pubDate>
-    <lastBuildDate>Sun, 08 May 2016 21:02:34 -0400</lastBuildDate>
+    <pubDate>Mon, 09 May 2016 19:17:25 -0400</pubDate>
+    <lastBuildDate>Mon, 09 May 2016 19:17:25 -0400</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
         <title>Gerrymandering</title>
         <description>&lt;p&gt;&lt;em&gt;The following is an excerpt from a term paper I am working on.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Last year, Ohio voted for stricter regulation of redistricting, to combat &lt;a href=&quot;http://www.huffingtonpost.com/entry/ohio-gerrymandering_us_563a5c76e4b0411d306f487e&quot;&gt;gerrymandering&lt;/a&gt;. People like to talk about gerrymandering, and how it is a big problem. It is real easy to see how politicians can manipulate the masses when you look at pictures like this:&lt;/p&gt;
+&lt;p&gt;Every ten years, each of the 50 US states redraws the boundaries for
+congressional districts. The lines are redrawn so all of the districts contain about an equal
+number of people. Each congressional district votes on a person to go to the US House of
+Representatives. As one can imagine, the political districts control a bit of power, which is
+shifted around every time the districts are redrawn. It is commonly believed that whichever
+party is in control of the redistricting process could misuse this ability to redraw districts, and
+rig elections in their favor. This practice is referred to as “gerrymandering.” We can see how
+this might work in this illustration:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/gerrymandering-explained.png&quot; alt=&quot;Gerrymandering in Action&quot; class=&quot;responsive-img materialboxed container&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/gerrymandering-explained.png&quot; alt=&quot;Gerrymandering in Action&quot; class=&quot;responsive-img materialboxed&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The conversation currently seems to be about how gerrymandering is bad and we need to fix it. I want to know if we can show specific evidence of gerrymandering being abused by political parties. I want to investigate the years that redistricting occurs, and determine if there is evidence to support that the political party in charge of redistricting gains an advantage in coming years. One can expect if a political party is in power, they will remain in power, but we can examine some metrics to see if they are gaining a competitive advantage through redistricting.&lt;/p&gt;
+&lt;p&gt;I want to see if we can detect gerrymandering when looking at the results of many US elections. The Federal Election Commision (FEC) has a &lt;a href=&quot;http://www.fec.gov/pubrec/electionresults.shtml&quot;&gt;website&lt;/a&gt; that provides historic election results for congressional districts. Unfortunately, The spreadsheets they provide only go back as far as the year 2000, everything provided before that point is a PDF. This gives us eight different elections to look at.&lt;/p&gt;
 
-&lt;p&gt;We can find house election data &lt;a href=&quot;http://www.fec.gov/pubrec/electionresults.shtml&quot;&gt;here&lt;/a&gt;. This gives us the elections of 1990, 2000, &amp;amp; 2010 to examine redistricting. For each of the three years, we will look at the makeup of democrat votes vs republican votes. We hypothesize that the party in control of redistricting will be more likely to win the election in the following year. We think we will see the number of districts controlled by the opposing party shrink, and in those districts, the concentration of opposite party members will grow.&lt;/p&gt;
+&lt;p&gt;I went through, and scraped as much data as possible from these spreadsheets. They had inconsistent formatting, and I was able to get 97% of the elections into a JSON archive easily.&lt;/p&gt;
+
+&lt;p&gt;The most interesting thing I found was the trends that present themselves when looking at gerrymandering on a graph. Below we see the percentage of Republican votes over total votes for state of North Carolina, over time. North Carolina had it’s districts redrawn after a &lt;a href=&quot;http://myfox8.com/2016/02/05/federal-court-invalidates-maps-of-north-carolinas-1st-12th-congressional-districts/&quot;&gt;widespread reporting&lt;/a&gt; of gerrymandering in the 2010 election cycle. We see that the districts cluster around a 60% concentration of Republicans. This is what is most advantageous for the Republicans: maintaining a majority in most states, and losing big in three.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/NC-Votes.png&quot; alt=&quot;Gerrymandering in Action&quot; class=&quot;responsive-img materialboxed&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;what-i-learned&quot;&gt;What I learned&lt;/h2&gt;
 
-&lt;p&gt;I have tried to make useful things for the open source community before, but always seem to fall short. My data is Open source, but I am unsure how useful it is. When scraping the excel files, about 5% of the data was missing. When reading in the votes for each race, There seemed to be four cases. For example, with the number 56789, it might appear:
+&lt;p&gt;I have tried to make useful things for the open source community before, but always seem to fall short. I will be releasing the repository on github soon, but am not sure how useful it will be to others. When scraping the excel files, about 5% of the data was was not scraped properly. I did not need it for my analysis. It seems the issue was in the order that the political races were listed. If the first race was not the winning race, than my scraper did not return the proper output.&lt;/p&gt;
+
+&lt;p&gt;When reading in the votes for each race, There seemed to be four cases. For example, with the number 56789, it might appear:
  - As a string (eg: “56,789”)
  - As a list (eg: “[56,789]”)
- - As a floating point (eg: 56789.0)&lt;/p&gt;
+ - As a floating point (eg: 56789.0)
+ - As a string saying, “Unopposed”&lt;/p&gt;
 
-&lt;p&gt;The fourth case was the string “Unopposed”. I saved unopposed elections with a flag of -1. I gave missing elections a zero. I see this was a bad decision for others to use my data.&lt;/p&gt;
+&lt;p&gt;For my sake, I saved unopposed elections with a flag of 0. I gave missing elections a flag of -1. I see this was a bad decision for others to use my data. I should have saved the flags as strings, leaving unopposed elections alone. This would have been more semantic. This would have also prevented people from doing some bad math, treating the -1’s and 0’s as literal values.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 12 Apr 2016 02:45:31 -0400</pubDate>
-        <link>http://denta.co/gerrymandering-blog-post</link>
-        <guid isPermaLink="true">http://denta.co/gerrymandering-blog-post</guid>
+        <pubDate>Fri, 06 May 2016 02:45:31 -0400</pubDate>
+        <link>http://denta.co/gerrymandering</link>
+        <guid isPermaLink="true">http://denta.co/gerrymandering</guid>
         
         
         <category>politics</category>
