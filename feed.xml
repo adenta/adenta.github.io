@@ -6,8 +6,8 @@
 </description>
     <link>http://denta.co/</link>
     <atom:link href="http://denta.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 Apr 2016 10:28:52 -0400</pubDate>
-    <lastBuildDate>Mon, 25 Apr 2016 10:28:52 -0400</lastBuildDate>
+    <pubDate>Sun, 08 May 2016 20:48:49 -0400</pubDate>
+    <lastBuildDate>Sun, 08 May 2016 20:48:49 -0400</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -21,6 +21,15 @@
 &lt;p&gt;The conversation currently seems to be about how gerrymandering is bad and we need to fix it. I want to know if we can show specific evidence of gerrymandering being abused by political parties. I want to investigate the years that redistricting occurs, and determine if there is evidence to support that the political party in charge of redistricting gains an advantage in coming years. One can expect if a political party is in power, they will remain in power, but we can examine some metrics to see if they are gaining a competitive advantage through redistricting.&lt;/p&gt;
 
 &lt;p&gt;We can find house election data &lt;a href=&quot;http://www.fec.gov/pubrec/electionresults.shtml&quot;&gt;here&lt;/a&gt;. This gives us the elections of 1990, 2000, &amp;amp; 2010 to examine redistricting. For each of the three years, we will look at the makeup of democrat votes vs republican votes. We hypothesize that the party in control of redistricting will be more likely to win the election in the following year. We think we will see the number of districts controlled by the opposing party shrink, and in those districts, the concentration of opposite party members will grow.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-i-learned&quot;&gt;What I learned&lt;/h2&gt;
+
+&lt;p&gt;I have tried to make useful things for the open source community before, but always seem to fall short. My data is Open source, but I am unsure how useful it is. When scraping the excel files, about 5% of the data was missing. When reading in the votes for each race, There seemed to be four cases. For example, with the number 56789, it might appear:
+ - As a string (eg: “56,789”)
+ - As a list (eg: “[56,789]”)
+ - As a floating point (eg: 56789.0)&lt;/p&gt;
+
+&lt;p&gt;The fourth case was the string “Unopposed”. I saved unopposed elections with a flag of -1. I gave missing elections a zero. I see this was a bad decision for others to use my data.&lt;/p&gt;
 </description>
         <pubDate>Tue, 12 Apr 2016 02:45:31 -0400</pubDate>
         <link>http://denta.co/gerrymandering-blog-post</link>

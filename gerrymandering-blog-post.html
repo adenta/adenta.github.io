@@ -9,13 +9,13 @@
   <title>Gerrymandering</title>
   <meta name="description" content="The following is an excerpt from a term paper I am working on.">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <link type="text/css" rel="stylesheet" href=" /assets/materialize/sass/materialize.css">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
   <link type="text/css" rel="stylesheet" href=" /assets/style.css " media="screen,projection">
 
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script  src=" /assets/core.js "></script>
   <script  src=" /assets/core.js "></script>
   <script  src=" /assets/masonry.js "></script>
 
@@ -30,7 +30,7 @@
   <body class="grey lighten-4">
     <main>
     <header class="site-header">
-  <nav class="blue darken-3">
+  <nav class="">
     <div class="nav-wrapper container">
       <a href="http://denta.co" class="brand-logo">Andrew Denta </a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -38,6 +38,8 @@
         
           
           <li><a class="page-link" href="/about/">About</a></li>
+          
+        
           
         
           
@@ -53,6 +55,8 @@
         
           
         <li>  <a class="page-link" href="/about/">About</a></li>
+          
+        
           
         
           
@@ -88,6 +92,15 @@
 
 <p>We can find house election data <a href="http://www.fec.gov/pubrec/electionresults.shtml">here</a>. This gives us the elections of 1990, 2000, &amp; 2010 to examine redistricting. For each of the three years, we will look at the makeup of democrat votes vs republican votes. We hypothesize that the party in control of redistricting will be more likely to win the election in the following year. We think we will see the number of districts controlled by the opposing party shrink, and in those districts, the concentration of opposite party members will grow.</p>
 
+<h2 id="what-i-learned">What I learned</h2>
+
+<p>I have tried to make useful things for the open source community before, but always seem to fall short. My data is Open source, but I am unsure how useful it is. When scraping the excel files, about 5% of the data was missing. When reading in the votes for each race, There seemed to be four cases. For example, with the number 56789, it might appear:
+ - As a string (eg: “56,789”)
+ - As a list (eg: “[56,789]”)
+ - As a floating point (eg: 56789.0)</p>
+
+<p>The fourth case was the string “Unopposed”. I saved unopposed elections with a flag of -1. I gave missing elections a zero. I see this was a bad decision for others to use my data.</p>
+
   </div>
 
 </article>
@@ -95,7 +108,7 @@
       </div>
     </div>
   </main>
-    <footer class="page-footer blue darken-3 white-text">
+    <footer class="page-footer ">
 
   <div class="container row">
     <a class="white-text"href="mailto:andrew.denta@gmail.com">andrew.denta@gmail.com</a>
@@ -103,7 +116,7 @@
 
 
   </div>
-  <div class="footer-copyright blue darken-3 ">
+  <div class="footer-copyright">
     <div class="container">
       ©2016 
     </div>
