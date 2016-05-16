@@ -6,9 +6,45 @@
 </description>
     <link>http://denta.co/</link>
     <atom:link href="http://denta.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 09 May 2016 19:17:25 -0400</pubDate>
-    <lastBuildDate>Mon, 09 May 2016 19:17:25 -0400</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
+    <pubDate>Mon, 16 May 2016 14:46:18 -0400</pubDate>
+    <lastBuildDate>Mon, 16 May 2016 14:46:18 -0400</lastBuildDate>
+    <generator>Jekyll v3.1.3</generator>
+    
+      <item>
+        <title>Mario Chase</title>
+        <description>&lt;p&gt;This semester, we did a research project on a game called Mario Chase. Rules can be found &lt;a href=&quot;http://www.mariowiki.com/Mario_Chase&quot;&gt;here&lt;/a&gt;. The game is basically hide-and-seek. The only change is that those who are seeking (toads) the person hiding  (Mario) know how far away they are from the person. The person hiding also gets to move around throughout the game. This problem would be trivial if we knew where on the board the seekers were, however; we do not have that metric. This is also not a problem that can be found through graph traversal methods, because the goal state (where Mario is) changes frequently. Graph search also does not work because we do not know &lt;em&gt;what&lt;/em&gt; the goal state is, only how far away we are from it.&lt;/p&gt;
+
+&lt;p&gt;We ran several algorithms, and found the most efficient one for finding Mario was rather simple:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for each toad:
+      replace the previous distance to mario with current distance.
+      recalculate the toads distance to mario.
+
+      if the previous distance is smaller than the current distance:
+          move the toad in a random direction
+      else:
+          move the toad in the same direction
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It was great to work on this with my friends &lt;a href=&quot;https://www.linkedin.com/in/adam-peters-799707aa&quot;&gt;Adam Peters&lt;/a&gt; and Lee Hiler! Check back to this page for the github link soon.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 May 2016 04:45:31 -0400</pubDate>
+        <link>http://denta.co/mario-chase</link>
+        <guid isPermaLink="true">http://denta.co/mario-chase</guid>
+        
+        
+        <category>project</category>
+        
+        <category>D3.js</category>
+        
+        <category>python</category>
+        
+        <category>JavaScript</category>
+        
+        <category>Materialize</category>
+        
+      </item>
     
       <item>
         <title>Gerrymandering</title>

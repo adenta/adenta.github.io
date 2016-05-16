@@ -19,6 +19,9 @@ p{
   line-height: 1.65;
   font-size:1.1em;
 }
+.card .card-content .card-title{
+  line-height: 1.5;
+}
 
 /* Pygments code hilighter */
 /*
