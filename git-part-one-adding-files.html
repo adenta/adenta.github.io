@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 
   <title>Adding and Staging Files.</title>
-  <meta name="description" content="This section of the tutorial will cover how to add files to a repository. This section will also cover what it means to ‘stage’ and ‘commit’ files, and how b...">
+  <meta name="description" content="Cloning a repo">
 
   <link type="text/css" rel="stylesheet" href=" /assets/materialize/sass/materialize.css">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
@@ -93,7 +93,103 @@
     </header>
 
     <div class="post-content">
-        <p>This section of the tutorial will cover how to add files to a repository. This section will also cover what it means to ‘stage’ and ‘commit’ files, and how both of these actions are different from a ‘push’.</p>
+        <h2 id="cloning-a-repo">Cloning a repo</h2>
+
+<div class="right">
+<img src="/assets/images/shoesforsnakes.svg" />
+<i>anyone who can come up with a better logo can earn some serious brownie points.</i>
+<div class="divider"></div>
+</div>
+
+<p>This section of the tutorial will cover how to add files to a repository. This section will also cover what it means to ‘stage’ and ‘commit’ files, and how both of these actions are different from a ‘push’.</p>
+
+<p>For the remainder of the tutorial, we will focus on Shoes for Snakes. This is a fictitious non-profit we made up, who we will be helping get their website ready for production.</p>
+
+<p>First, we will need to ‘clone’ our git repository. Think of a git repository as a bunch of files. We need to get these files onto whatever computer we are working on. To do this, we use the git clone command. The git clone command works by typing:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/adenta/git-tutorial-repo</code></pre></figure>
+
+<p>Here, we type ‘git clone’ to specify we want to clone a repository somewhere else. we follow this command with the URL of the repository. After you run this command through your terminal, you will have the repository on your desktop.</p>
+
+<h2 id="adding-a-file">Adding a file</h2>
+
+<p>Now that we have our repository on our computer, we can look at the files, and make changes to it. If we open the ‘index.html’ in a web browser, we see the starts of a public website. If we look at the index.html in a code editor, we see that the style tag contains our style information.</p>
+
+<p>If we want more than one page reading the same set of styles, we will need to move it to a separate file. To do this, we will create another file, called ‘style.css’. Create the style.css file in the same ‘git-tutorial-repo’ folder.</p>
+
+<p>Copy the styles from the style tag, and reference the external file from the index.html file. Your directory should look like:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    git-tutorial-repo
+    --shoesforsnakes.svg
+    --index.html
+    --README.md
+    --style.css</code></pre></figure>
+
+<p>Your index.html head tag should look like:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Shoes for Snakes<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"style.css"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;/head&gt;</span></code></pre></figure>
+
+<p>And your style.css:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">40px</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">max-width</span><span class="p">:</span> <span class="m">650px</span><span class="p">;</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.6</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#444</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="m">#ededed</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">main</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="m">#ffffff</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">3px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span><span class="o">,</span>
+<span class="nt">h2</span><span class="o">,</span>
+<span class="nt">h3</span> <span class="p">{</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.2</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span> <span class="p">{</span>
+  <span class="nl">padding-top</span><span class="p">:</span><span class="m">50px</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span><span class="m">#ffffff</span><span class="p">;</span>
+  <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>And that is it! Adding a file to a git repo is just about adding a file to the folder the repo is in.</p>
+
+<h2 id="staging-the-file">Staging the file</h2>
+
+<p>Now that we added the file, we have to stage it. When you add a file to a git repo, we have to tell git to track the file. This makes more sense when working in larger projects. To add our new ‘style.css’ file, we run the following in our git-tutorial-repo folder:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git add style.css
+</code></pre>
+</div>
+
+<p>This does what you would imagine: It adds the style.css file to the git repository. Now whenever we change the file, git will keep track of the change. Git will only track the change when we commit the file to the repository. We will cover Commits in the next section.</p>
+
+<h2 id="advanced-add-commands">Advanced add commands</h2>
+
+<p>Sometimes, we want to add a bunch of files. To do that we:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git add .
+</code></pre>
+</div>
+
+<p>This recursively adds all untracked files. Sometimes, we might delete a file. When we do that, we:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git add . -u
+</code></pre>
+</div>
+
+<p>We add the ‘-u’ flag to indicate to update the working directory, to git rid of the deleted files.</p>
 
         <div>
           <div class="divider"></div>
