@@ -114,7 +114,7 @@
   Current Lap: <span id="lap"></span>
 </p>
 <p>
-  Top Three: <span id="three"></span>
+  Top Five: <span id="five"></span>
 </p>
 <p><b>
 Score:
@@ -219,7 +219,11 @@ function processResults(d) {
   }
 
   document.getElementById('lap').innerHTML = drivers[0].laps;
-  document.getElementById('three').innerHTML = topThree.join(", ");
+
+  var topFive = topThree.slice(0);
+  topFive.push(drivers[3].lastName);
+  topFive.push(drivers[4].lastName);
+  document.getElementById('five').innerHTML = topFive.join(", ");
 
   family.forEach(function(e) {
     var score = 0;
