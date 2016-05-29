@@ -14,5 +14,5 @@ window.onload = function(){
     columnWidth: '.topCol',
     itemSelector: '.topCol',
   });
-  
+
 };
