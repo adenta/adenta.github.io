@@ -31,7 +31,7 @@ function renderHTML() {
     document.write("      Original");
     document.write("      <input id=\"scoringSystem\" type=\"checkbox\">");
     document.write("      <span class=\"lever\"><\/span>");
-    document.write("      Updated");
+    document.write("      Modified");
     document.write("    <\/label>");
     document.write("  <\/div>");
     document.write("<table class=\"responsive-table \">");
@@ -114,7 +114,7 @@ original: function scoreParticipant(e, orderedRacers) {
 
     return score;
 },
-updated: function scoreParticipant(e, orderedRacers) {
+modified: function scoreParticipant(e, orderedRacers) {
     var score = 0;
     score += orderedRacers.indexOf(e["6"]);
     score += orderedRacers.indexOf(e["3"]);
@@ -175,7 +175,7 @@ function processResults(d) {
 
     family.forEach(function(e) {
 
-      var scoringSystem = (document.getElementById('scoringSystem').checked)? buisnessLogic.updated : buisnessLogic.original;
+      var scoringSystem = (document.getElementById('scoringSystem').checked)? buisnessLogic.modified : buisnessLogic.original;
         var score = scoringSystem(e, orderedRacers);
 
         scores.push({
