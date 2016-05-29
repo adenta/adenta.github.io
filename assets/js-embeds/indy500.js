@@ -23,10 +23,10 @@ function renderHTML() {
     document.write("<p>");
     document.write("  Top Five: <span id=\"five\"><\/span>");
     document.write("<\/p>");
-    document.write("<b>");
-    document.write("Score:");
-    document.write("<\/b>");
     document.write("<div class=\" right switch\">");
+    document.write("<b>");
+    document.write("Score: ");
+    document.write("<\/b>");
     document.write("    <label>");
     document.write("      Original");
     document.write("      <input id=\"scoringSystem\" type=\"checkbox\">");
