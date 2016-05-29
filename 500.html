@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 
   <title>Indy 500 Family</title>
-  <meta name="description" content="  Time:    Current Lap:   Top Three: Score:">
+  <meta name="description" content="What is this?">
 
   <link type="text/css" rel="stylesheet" href=" /assets/materialize/sass/materialize.css">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
@@ -91,7 +91,21 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>
+    <h2 id="what-is-this">What is this?</h2>
+
+<p>The Denta family year after year tries to pick who will win the Indianapolis 500. I was able to get access to the race data API, and decided to make a dashboard about who is currently ‘winning’ in the family. This page will delete itself tomorrow!</p>
+
+<p><strong>Please take this information with a grain of salt.</strong> I wrote this quickly, so it would be of use for as much of the race as possible. <strong>I am not counting extra points that are to be distributed after the race</strong>.</p>
+
+<p>Two extra points are awarded if you correctly predicted:</p>
+
+<ul>
+  <li>Leader at 10 laps left wins race?</li>
+  <li>Winning driver leads most laps?</li>
+  <li>Pole sitter (Hinchcliffe) finishes in top 5?</li>
+</ul>
+
+<p>
   Time: <span id="time"> </span>
 </p>
 <p>
@@ -103,7 +117,7 @@
 <p><b>
 Score:
 </b></p>
-<ul id="out">
+<ul id="out" class="collection">
 
 </ul>
 
@@ -217,7 +231,7 @@ function processResults(d) {
   });
   console.log(scores);
   scores.forEach(function(e) {
-    out.innerHTML += "<li>" + e.score + " " + e.name + "</li>";
+    out.innerHTML += "<li class='collection-item'>" + "<b>" + e.score + "</b> " + e.name + "</li>";
   });
 
 };
