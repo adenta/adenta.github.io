@@ -23,7 +23,7 @@ function renderHTML() {
     document.write("<p>");
     document.write("  Top Five: <span id=\"five\"><\/span>");
     document.write("<\/p>");
-    document.write("<div class=\" right switch\">");
+    document.write("<div class=\" switch\">");
     document.write("<b>");
     document.write("Score: ");
     document.write("<\/b>");
