@@ -119,9 +119,20 @@
 <p><b>
 Score:
 </b></p>
-<ul id="out" class="collection">
+<table class="responsive-table ">
+  <thead>
+  <td>Name</td>
+  <td>score</td>
+  <td>1st</td>
+  <td>2nd</td>
+  <td>3rd</td>
+  </thead>
+<tbody id="out">
 
-</ul>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
 
 <script>
 
@@ -224,7 +235,10 @@ function processResults(d) {
     }
     scores.push({
       "name": e.Name,
-      "score": score
+      "score": score,
+      "first": e["6"],
+      "second":e["3"],
+      "third":e["1"]
     });
   });
 
@@ -233,7 +247,15 @@ function processResults(d) {
   });
   console.log(scores);
   scores.forEach(function(e) {
-    out.innerHTML += "<li class='collection-item'>" + "<b>" + e.score + "</b> " + e.name + "</li>";
+    out.innerHTML += "<tr class='collection-item'>" +
+      "<td>" + e.name + "</td>" +
+      "<td><b>" + e.score + "</b></td>" +
+
+      "<td>" + e.first + "</td>" +
+      "<td>" + e.second + "</td>" +
+      "<td>" + e.third + "</td>" +
+
+       "</tr>";
   });
 
 };
@@ -241,7 +263,8 @@ $(document).ready(function() {
 
   var url = 'http://racecontrol.indycar.com/xml/timingscoring.json';
   //var url = 'http://dev.ims.com/xml/timingscoring.json';
-  setInterval(function() {
+
+  function callApi() {
     $.ajax({
       type: 'GET',
       url: url,
@@ -252,7 +275,9 @@ $(document).ready(function() {
       success: processResults
     });
 
-  }, 5000);
+  }
+  setInterval(callApi, 5000);
+  callApi();
 
 });
 
