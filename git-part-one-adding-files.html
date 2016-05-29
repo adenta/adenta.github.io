@@ -175,7 +175,7 @@
 
 <p>This does what you would imagine: It adds the style.css file to the git repository. Now whenever we change the file, git will keep track of the change. Git will only track the change when we commit the file to the repository. We will cover Commits in the next section.</p>
 
-<h2 id="advanced-add-commands">Advanced add commands</h2>
+<h2 id="advanced-add-command">Advanced add command</h2>
 
 <p>Sometimes, we want to add a bunch of files. To do that we:</p>
 
@@ -183,13 +183,7 @@
 </code></pre>
 </div>
 
-<p>This recursively adds all untracked files. Sometimes, we might delete a file. When we do that, we:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>git add . -u
-</code></pre>
-</div>
-
-<p>We add the ‘-u’ flag to indicate to update the working directory, to git rid of the deleted files.</p>
+<p>This recursively adds all untracked files in the current git repository. If I made changes to the ‘index.html’ and the ‘style.css’ files, I could add them both by typing ‘git add .’.</p>
 
         <div>
           <div class="divider"></div>

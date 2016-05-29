@@ -6,9 +6,173 @@
 </description>
     <link>http://denta.co/</link>
     <atom:link href="http://denta.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 25 May 2016 23:26:46 -0400</pubDate>
-    <lastBuildDate>Wed, 25 May 2016 23:26:46 -0400</lastBuildDate>
+    <pubDate>Sun, 29 May 2016 13:38:19 -0400</pubDate>
+    <lastBuildDate>Sun, 29 May 2016 13:38:19 -0400</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
+    
+      <item>
+        <title>Indy 500 Family</title>
+        <description>&lt;p&gt;
+  Time: &lt;span id=&quot;time&quot;&gt; &lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  Current Lap: &lt;span id=&quot;lap&quot;&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  Top Three: &lt;span id=&quot;three&quot;&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;
+Score:
+&lt;/b&gt;&lt;/p&gt;
+&lt;ul id=&quot;out&quot;&gt;
+
+&lt;/ul&gt;
+
+&lt;script&gt;
+
+if (!String.prototype.includes) {
+  String.prototype.includes = function(search, start) {
+    &#39;use strict&#39;;
+    if (typeof start !== &#39;number&#39;) {
+      start = 0;
+    }
+
+    if (start + search.length &gt; this.length) {
+      return false;
+    } else {
+      return this.indexOf(search, start) !== -1;
+    }
+  };
+}
+
+
+var family = [{
+  &quot;1&quot;: &quot;Munoz&quot;,
+  &quot;3&quot;: &quot;Castroneves&quot;,
+  &quot;6&quot;: &quot;Dixon&quot;,
+  &quot;Name&quot;: &quot;Tuttle&quot;
+}, {
+  &quot;1&quot;: &quot;Pagenaud&quot;,
+  &quot;3&quot;: &quot;Dixon&quot;,
+  &quot;6&quot;: &quot;Montoya&quot;,
+  &quot;Name&quot;: &quot;Andrew&quot;
+}, {
+  &quot;1&quot;: &quot;Daly&quot;,
+  &quot;3&quot;: &quot;Kanaan&quot;,
+  &quot;6&quot;: &quot;Castroneves&quot;,
+  &quot;Name&quot;: &quot;Katie&quot;
+}, {
+  &quot;1&quot;: &quot;Kanaan&quot;,
+  &quot;3&quot;: &quot;Hunter-Reay&quot;,
+  &quot;6&quot;: &quot;Power&quot;,
+  &quot;Name&quot;: &quot;Mitch&quot;
+}, {
+  &quot;1&quot;: &quot;Hildebrand&quot;,
+  &quot;3&quot;: &quot;Montoya&quot;,
+  &quot;6&quot;: &quot;Power&quot;,
+  &quot;Name&quot;: &quot;TeriAnn&quot;
+}, {
+  &quot;1&quot;: &quot;Power&quot;,
+  &quot;3&quot;: &quot;Kanaan&quot;,
+  &quot;6&quot;: &quot;Montoya&quot;,
+  &quot;Name&quot;: &quot;Bee&quot;
+}, {
+  &quot;1&quot;: &quot;Hinchcliffe&quot;,
+  &quot;3&quot;: &quot;Pagenaud&quot;,
+  &quot;6&quot;: &quot;Hunter-Reay&quot;,
+  &quot;Name&quot;: &quot;Lt. Dan&quot;
+}, {
+  &quot;1&quot;: &quot;Castroneves&quot;,
+  &quot;3&quot;: &quot;Hinchcliffe&quot;,
+  &quot;6&quot;: &quot;Hunter-Reay&quot;,
+  &quot;Name&quot;: &quot;Leenie&quot;
+}, {
+  &quot;1&quot;: &quot;Newgarden&quot;,
+  &quot;3&quot;: &quot;Rahal&quot;,
+  &quot;6&quot;: &quot;Dixon&quot;,
+  &quot;Name&quot;: &quot;Jackie&quot;
+}];
+
+
+var topThree = [];
+
+function processResults(d) {
+  var scores = [];
+
+  var time = d.timing_results.heartbeat.dateTime;
+  document.getElementById(&#39;time&#39;).innerHTML = time;
+
+
+  var out = document.getElementById(&#39;out&#39;);
+  out.innerHTML = &quot;&quot;;
+
+  var drivers = d.timing_results.Item;
+  topThree = [];
+  for (var i = 0; i &lt; 3; i++) {
+    topThree.push(drivers[i].lastName);
+  }
+
+  document.getElementById(&#39;lap&#39;).innerHTML = drivers[0].laps;
+  document.getElementById(&#39;three&#39;).innerHTML = topThree.join(&quot;, &quot;);
+
+  family.forEach(function(e) {
+    var score = 0;
+    if (topThree.includes(e[&quot;1&quot;])) {
+      score += 1;
+    }
+    if (topThree[1] == e[&quot;3&quot;] || topThree[0] == e[&quot;3&quot;]) {
+      score += 3;
+    }
+
+    if (topThree[0] == e[&quot;6&quot;]) {
+      score += 6;
+    }
+    scores.push({
+      &quot;name&quot;: e.Name,
+      &quot;score&quot;: score
+    });
+  });
+
+  scores.sort(function(a, b) {
+    return b.score - a.score;
+  });
+  console.log(scores);
+  scores.forEach(function(e) {
+    out.innerHTML += &quot;&lt;li&gt;&quot; + e.score + &quot; &quot; + e.name + &quot;&lt;/li&gt;&quot;;
+  });
+
+};
+$(document).ready(function() {
+
+  var url = &#39;http://racecontrol.indycar.com/xml/timingscoring.json&#39;;
+  //var url = &#39;http://dev.ims.com/xml/timingscoring.json&#39;;
+  setInterval(function() {
+    $.ajax({
+      type: &#39;GET&#39;,
+      url: url,
+      async: false,
+      jsonpCallback: &#39;jsonCallback&#39;,
+      contentType: &quot;application/json&quot;,
+      dataType: &#39;jsonp&#39;,
+      success: processResults
+    });
+
+  }, 5000);
+
+});
+
+
+&lt;/script&gt;
+
+</description>
+        <pubDate>Sun, 29 May 2016 04:45:31 -0400</pubDate>
+        <link>http://denta.co/500</link>
+        <guid isPermaLink="true">http://denta.co/500</guid>
+        
+        
+        <category>Javascript</category>
+        
+      </item>
     
       <item>
         <title>Mario Chase</title>
@@ -95,6 +259,20 @@ this might work in this illustration:&lt;/p&gt;
       <item>
         <title>Committing and Removing Files</title>
         <description>&lt;p&gt;This section of the tutorial will talk about the ‘commit’ step of the git work flow. We will also look at what happens when you remove a file from a git repo, and how to tell git about that changed file.&lt;/p&gt;
+
+&lt;h2 id=&quot;committing-a-repo&quot;&gt;Committing a repo&lt;/h2&gt;
+
+&lt;p&gt;Now that we made changes to our files, we want to save a ‘snapshot’ of the current project. This snapshot is called a commit. Each commit also has an attached message, that gives some information about the commit. To commit your files, we will type:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit -m &quot;put styles in a separate file.&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here, we are telling git to remember what the repository looked like at this point in time, and attaching a message of “put styles in a separate file.” This will help us remember in the future where the first commit was that added the style.css file.&lt;/p&gt;
+
+&lt;h2 id=&quot;removing-files&quot;&gt;Removing files&lt;/h2&gt;
+
+&lt;p&gt;Removing files can be somewhat tricky. Let’s say we want to make our site&lt;/p&gt;
 </description>
         <pubDate>Tue, 03 May 2016 05:15:31 -0400</pubDate>
         <link>http://denta.co/git-part-two-commiting</link>
@@ -191,7 +369,7 @@ this might work in this illustration:&lt;/p&gt;
 
 &lt;p&gt;This does what you would imagine: It adds the style.css file to the git repository. Now whenever we change the file, git will keep track of the change. Git will only track the change when we commit the file to the repository. We will cover Commits in the next section.&lt;/p&gt;
 
-&lt;h2 id=&quot;advanced-add-commands&quot;&gt;Advanced add commands&lt;/h2&gt;
+&lt;h2 id=&quot;advanced-add-command&quot;&gt;Advanced add command&lt;/h2&gt;
 
 &lt;p&gt;Sometimes, we want to add a bunch of files. To do that we:&lt;/p&gt;
 
@@ -199,13 +377,7 @@ this might work in this illustration:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;This recursively adds all untracked files. Sometimes, we might delete a file. When we do that, we:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add . -u
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We add the ‘-u’ flag to indicate to update the working directory, to git rid of the deleted files.&lt;/p&gt;
+&lt;p&gt;This recursively adds all untracked files in the current git repository. If I made changes to the ‘index.html’ and the ‘style.css’ files, I could add them both by typing ‘git add .’.&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 May 2016 05:00:31 -0400</pubDate>
         <link>http://denta.co/git-part-one-adding-files</link>
@@ -228,10 +400,10 @@ this might work in this illustration:&lt;/p&gt;
 &lt;h2 id=&quot;why-do-i-need-to-use-it&quot;&gt;Why do I need to use it?&lt;/h2&gt;
 &lt;p&gt;At Serve IT, we use Git to manage &amp;amp; deploy our projects. It is easier to type ‘git clone’ and have a bunch of files suddenly appear on your computer, than it would be to copy them manually. It is also be easier to type ‘git push’ than it is to manually use something like FTP to make changes to an application server.&lt;/p&gt;
 
-&lt;p&gt;##How do I get it set up?
-This tutorial is about how to use git effectively, not how to install it on your computer. If you need to install git, &lt;a href=&quot;https://help.github.com/articles/set-up-git/&quot;&gt;start here&lt;/a&gt;. Windows Users will need to use their command prompt. Mac and Linux users will use their Terminal.&lt;/p&gt;
+&lt;h2 id=&quot;how-do-i-get-it-set-up&quot;&gt;How do I get it set up?&lt;/h2&gt;
+&lt;p&gt;This tutorial is about how to use git effectively, not how to install it on your computer. If you need to install git, &lt;a href=&quot;https://help.github.com/articles/set-up-git/&quot;&gt;start here&lt;/a&gt;. Windows Users will need to use their command prompt. Mac and Linux users will use their Terminal.&lt;/p&gt;
 
-&lt;p&gt;This tutorial will serve as a basic introduction to Git. Serve IT specific procedures will be explained at a later time. This tutorial will not cover &lt;a href=&quot;https://desktop.github.com/&quot;&gt;Github Desktop&lt;/a&gt;. This is a graphic interface for Git. This is a useful tool, but not the purpose of this tutorial.&lt;/p&gt;
+&lt;p&gt;This tutorial will serve as a basic introduction to Git. This tutorial will not cover &lt;a href=&quot;https://desktop.github.com/&quot;&gt;Github Desktop&lt;/a&gt;. This is a graphic interface for Git. This is a useful tool, but not the purpose of this tutorial.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;We will cover:&lt;/strong&gt;&lt;/p&gt;
 
@@ -251,7 +423,7 @@ This tutorial is about how to use git effectively, not how to install it on your
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;For me, when I run this command, I have ‘git version 1.9.1’. Make sure this command works before proceeding.&lt;/p&gt;
+&lt;p&gt;For me, when I run this command, I see ‘git version 1.9.1’ as the output on the terminal. Make sure this command works before proceeding.&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 May 2016 04:45:31 -0400</pubDate>
         <link>http://denta.co/git-intro</link>
@@ -355,48 +527,6 @@ This tutorial is about how to use git effectively, not how to install it on your
         
         
         <category>balloons</category>
-        
-      </item>
-    
-      <item>
-        <title>Feedback</title>
-        <description>&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;I often find myself behind a sound board. I have always enjoyed contributing to any sort of performance through operating sound and lighting equipment. One problem I found myself facing time and time again was that of communication. I would wind up needing to do fifty things at the same time, and would constantly be riddled with requests.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Can you turn me up in the monitors?”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Hey Andrew, can you hear me back there? I don’t think my mic is working.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“We have this video we need you to play tonight. It’s on this DVD at the 42 minute mark. We just need thirty seconds from that point.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;With many things trying to happen in a short period of time, I thought software might be a way to make my life easier. I spent an evening constructing a very basic MVP, to see if it might work for aggregating feedback from band members as to how well they can hear themselves.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-it-works&quot;&gt;How It Works&lt;/h2&gt;
-&lt;p&gt;My goal with Feedback was to make it so people in a band can communicate to a sound technician what to change about their dynamics as easily as possible. I used two views, one for the people making requests about wanting to be turned up or down, and another to display this information. I did not focus too much on security for this application, as there was no sensitive information being communicated. Band members select ‘who they are’, and then drag a slider where they want it to be. We can than see all these changes &lt;a href=&quot;feedback-iu.herokuapp.com/admin&quot;&gt;here&lt;/a&gt;. On the admin view, once all requests have been satisfied, you can press the thumbs up emoji button, to let everyone know that you processed their request. This will reset their sliders to the middle position.&lt;/p&gt;
-
-&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
-&lt;p&gt;We tried it out a few times, and it was hard to get people to use the site to log requests as to what they needed. For the time being, it seems the status quo will be here to stay, until I can figure out what the bottleneck is in terms of allowing everyone to tell me what they need done in an orderly fashion.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 28 Feb 2016 03:45:31 -0500</pubDate>
-        <link>http://denta.co/feedback</link>
-        <guid isPermaLink="true">http://denta.co/feedback</guid>
-        
-        
-        <category>project</category>
-        
-        <category>socket.io</category>
-        
-        <category>JQuery</category>
-        
-        <category>JavaScript</category>
-        
-        <category>node</category>
         
       </item>
     
