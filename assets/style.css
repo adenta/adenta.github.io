@@ -23,6 +23,13 @@ p{
   line-height: 1.5;
 }
 
+
+#asciiLoader{
+    margin-top: 210px;
+}
+#asciinemaContainer{
+  max-height: 500px;
+}
 /* Pygments code hilighter */
 /*
  * GitHub style for Pygments syntax highlighter, for use with Jekyll
