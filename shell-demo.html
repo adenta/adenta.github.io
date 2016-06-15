@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+
+  <title>Shell Commands Crash Course</title>
+  <meta name="description" content="What is a Shell">
+
+  <link type="text/css" rel="stylesheet" href=" /assets/materialize/sass/materialize.css">
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link type="text/css" rel="stylesheet" href=" /assets/style.css " media="screen,projection">
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script  src=" /assets/materialize/js/bin/materialize.js "></script>
+  <script  src=" /assets/materialize/js/initial.js"></script>
+  <script  src=" /assets/core.js "></script>
+  <script  src=" /assets/masonry.js "></script>
+
+  <link rel="canonical" href="http://denta.co/shell-demo">
+  <link rel="alternate" type="application/rss+xml" title="Andrew Denta" href="http://denta.co /feed.xml ">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+
+  <body class="grey lighten-4">
+    <main>
+    <header class="site-header">
+    <nav>
+        <div class="nav-wrapper container">
+            <a href="http://denta.co" class="brand-logo">Andrew Denta </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                 
+                
+<li><a class="page-link" href="/about/">About</a></li>
+
+
+                         
+                
+<li><a class="page-link" href="/projects/">Projects</a></li>
+
+
+                   
+                
+<li><a class="page-link" href="/tutorials/">Tutorials</a></li>
+
+
+                  
+            </ul>
+
+            <ul class="side-nav" id="mobile-demo">
+               
+              
+<li><a class="page-link" href="/about/">About</a></li>
+
+
+
+                       
+              
+<li><a class="page-link" href="/projects/">Projects</a></li>
+
+
+
+                 
+              
+<li><a class="page-link" href="/tutorials/">Tutorials</a></li>
+
+
+
+                
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+    <div class="container">
+      <div class="wrapper">
+        <article class="post card-panel">
+
+    <header class="post-header">
+        <h1 class="post-title truncate hide-on-med-and-down">Shell Commands Crash Course</h1>
+        <h1 class="post-title flow-text hide-on-large-only">Shell Commands Crash Course</h1>
+
+        <div class="divider"></div>
+    </header>
+
+    <div class="post-content">
+        <h2 id="what-is-a-shell">What is a Shell</h2>
+
+<p>A shell is a tool we use to interact with a computer. It is pretty powerful. There are a few basic commands that will help you navigate the computer using a shell.</p>
+
+<h2 id="frequently-used-shell-commands">Frequently Used Shell Commands</h2>
+
+<h3 id="ls">ls</h3>
+
+<p>ls is a command that lists all files in the current directory. If you had a directory that had three files in it, file1.txt, file2.txt, and file3.txt, and you ran ls, you would see something like:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="o">(</span>trusty<span class="o">)</span>root@localhost:~# ls
+    file1.txt  file2.txt  file3.txt</code></pre></figure>
+
+<h3 id="cd">cd</h3>
+
+<p>cd is a command that changes what directory you are currently in. If you are currently in directory A, and want to go up one level, you would use ‘../’ as the directory you want to change to. For example, if you have a folder called ‘Downloads’, you could access that directory contents by running cd Downloads:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="o">(</span>trusty<span class="o">)</span>root@localhost:~# <span class="nb">cd </span>Downloads/
+    <span class="o">(</span>trusty<span class="o">)</span>root@localhost:~/Downloads#</code></pre></figure>
+
+<h3 id="mkdir">mkdir</h3>
+
+<p>mkdir is a command that creates a new directory. For example, to create a new directory called ‘files’ you would run ‘mkdir files’ as seen here:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="o">(</span>trusty<span class="o">)</span>root@localhost:~# ls         
+    Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+    <span class="o">(</span>trusty<span class="o">)</span>root@localhost:~# mkdir files
+    <span class="o">(</span>trusty<span class="o">)</span>root@localhost:~# ls
+    Desktop    Downloads  Pictures  Templates  files
+    Documents  Music      Public    Videos</code></pre></figure>
+
+<h3 id="nano">nano</h3>
+
+<p>nano opens a file in the nano text editor. If you want to create a file, you can run nano to create that file, and open it.</p>
+
+<p>We can see a demo of nano in action in the below demonstration.</p>
+
+<h3 id="cat">cat</h3>
+
+<p>cat prints the contents of a file. If we have a file named ‘file.txt’ which contains the words ‘this is a file’, we can see its contents using cat.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">(trusty)root@localhost:~# </span>ls
+Desktop    Downloads  Music     Public     Videos
+Documents  file.txt   Pictures  Templates
+<span class="gp">(trusty)root@localhost:~# </span>cat file.txt
+this is a file</code></pre></figure>
+
+<h3 id="rm">rm</h3>
+
+<p>rm is a dangerous command. It removes files. If we have a text file named ‘file.txt’ we can remove it with rm:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">(trusty)root@localhost:~# </span>ls
+Desktop    Downloads  Music     Public     Videos
+Documents  file.txt   Pictures  Templates
+<span class="gp">(trusty)root@localhost:~# </span>rm file.txt
+<span class="gp">(trusty)root@localhost:~# </span>ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+<span class="o">(</span>trusty<span class="o">)</span>root@localhost:~#</code></pre></figure>
+
+<h2 id="demonstration">Demonstration</h2>
+
+<p>Here is a short demo making use of all of these commands.</p>
+
+<div><b>This terminal recording ca be found at <a href="https://asciinema.org/a/34tyjhehmftwo04lbpekw3f4d"> asciinema.org</a>.</b></div>
+
+<div class="hide-on-large-only">
+  <a href="https://asciinema.org/a/34tyjhehmftwo04lbpekw3f4d"><img class="responsive-img" src="https://asciinema.org/a/34tyjhehmftwo04lbpekw3f4d.png" width="836" /></a>
+
+</div>
+<div id="asciinemaContainer" class="center-align hide-on-med-and-down ">
+  <div id="asciiLoader" class="preloader-wrapper big active">
+    <div class="spinner-layer">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="https://asciinema.org/a/34tyjhehmftwo04lbpekw3f4d.js" id="asciicast-34tyjhehmftwo04lbpekw3f4d" async=""></script>
+<script>
+$(window).load(function() {
+
+  $("#asciiLoader").hide();
+
+ });
+
+
+
+</script>
+</div>
+
+
+        <div>
+          <div class="divider"></div>
+        <div class="row">
+          <div class="col s6 left-align">&nbsp;
+            
+            <strong>Previous:</strong> <a href="/git-intro">Intro to Git</a>
+            
+          </div>
+            <div class="col s6 right-align">
+             
+           <strong>Next:</strong> <a href="/git-part-one-adding-files">Adding and Staging Files.</a>
+            
+          &nbsp;</div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+</article>
+
+      </div>
+    </div>
+  </main>
+    <footer class="page-footer ">
+
+  <div class="container row">
+    <a class="white-text"href="mailto:andrew.denta@gmail.com">andrew.denta@gmail.com</a>
+
+
+
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      ©2016 
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+
+</html>
