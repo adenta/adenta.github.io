@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 
-  <title>Mario Chase</title>
-  <meta name="description" content="This semester, we did a research project on a game called Mario Chase. Rules can be found here. The game is basically hide-and-seek. The only change is that ...">
+  <title>Gerrymandering: The Game</title>
+  <meta name="description" content="My sister’s boyfriend and I had this idea for a game about gerrymandering for a while. I have tried my best to explain it through slides and an HTML5 video d...">
 
   <link type="text/css" rel="stylesheet" href=" /assets/materialize/sass/materialize.css">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
@@ -20,7 +20,7 @@
   <script  src=" /assets/core.js "></script>
   <script  src=" /assets/masonry.js "></script>
 
-  <link rel="canonical" href="http://denta.co/mario-chase">
+  <link rel="canonical" href="http://denta.co/gerrymandering-the-game">
   <link rel="alternate" type="application/rss+xml" title="Andrew Denta" href="http://denta.co /feed.xml ">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -88,47 +88,32 @@
 
     <header class="post-header">
       <div class="row">
-        <h1 class="post-title center" itemprop="name headline">Mario Chase</h1>
+        <h1 class="post-title center" itemprop="name headline">Gerrymandering: The Game</h1>
 
       </div>
       <div class="row">
         <p class="post-meta col s12">
-          <time datetime="2016-05-08T01:45:31-07:00" itemprop="datePublished">May 8, 2016</time></p>
+          <time datetime="2016-07-03T01:45:31-07:00" itemprop="datePublished">Jul 3, 2016</time></p>
 
       </div>
     </header>
     <div class="post-content" itemprop="articleBody">
-      <p>This semester, we did a research project on a game called Mario Chase. Rules can be found <a href="http://www.mariowiki.com/Mario_Chase">here</a>. The game is basically hide-and-seek. The only change is that those who are seeking (toads) the person hiding  (Mario) know how far away they are from the person. The person hiding also gets to move around throughout the game. This problem would be trivial if we knew where on the board the seekers were, however; we do not have that metric. This is also not a problem that can be found through graph traversal methods, because the goal state (where Mario is) changes frequently. Graph search also does not work because we do not know <em>what</em> the goal state is, only how far away we are from it.</p>
+      <p>My <a href="https://www.linkedin.com/in/mitchel-hill-4205b58b">sister’s boyfriend</a> and I had this idea for a game about gerrymandering for a while. I have tried my best to explain it through slides and an HTML5 video demo.</p>
 
-<p>We ran several algorithms, and found the most efficient one for finding Mario was rather simple:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>for each toad:
-      replace the previous distance to mario with current distance.
-      recalculate the toads distance to mario.
-
-      if the previous distance is smaller than the current distance:
-          move the toad in a random direction
-      else:
-          move the toad in the same direction
-</code></pre>
-</div>
-
-<p>It was great to work on this with my friends <a href="https://www.linkedin.com/in/adam-peters-799707aa">Adam Peters</a> and Lee Hiler!</p>
-
-<p>EDIT: The github repository is located <a href="https://github.com/adenta/Mario-Chase-Theatre">here</a>. The system was designed to model mario chase as simply as possible. We render the maps, and than we save them as JSON. We than made a quick node server to fetch these data files, and <em>view</em> them in browser.</p>
+<p>I think this would be a great tool for the classroom. A quick game that would teach people how gerrymandering works. I have suspended work on this project, until I can find more teachers interested in using this in their classrooms. Feel free to reach out at my contact info in the footer.</p>
 
     </div>
 
 
   </article>
-  <a href="https://mario-chase-theatre.herokuapp.com">
+  <a href="https://gerrymandering-game.herokuapp.com">
   <div class=" col s12 m4 ">
     <div class="card">
       <div class="card-image">
-        <img class="img-responsive" src="/assets/images/mario-chase.png">
+        <img class="img-responsive" src="/assets/images/gerrymandering-game.png">
       </div>
       <h3 class="card-content flow-text">
-        <a href="https://mario-chase-theatre.herokuapp.com">Check out Mario Chase on the web.
+        <a href="https://gerrymandering-game.herokuapp.com">Check out Gerrymandering: The Game on the web.
 
       </h3>
 
