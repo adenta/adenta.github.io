@@ -138,6 +138,14 @@ $(window).load(function() {
 
 <h2 id="removing-files">Removing files</h2>
 
+<p>Removing files can be a tad tricky. If we wanted to completely remove the ‘style.css’ file, we could run:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git rm style.css
+</code></pre>
+</div>
+
+<p>The file would than be removed from our repo, and deleted. However; sometimes we delete files manually. If you delete a file from your file explorer, git will not recognize that you wanted to delete the file from your repo. You can fix this by doing the same ‘git rm’ commad as seen above, or when you add all of your other files, you can use ‘git add -u’ to ‘update’ your repository to the current structure. The ‘u’ stands for update, if I was too subtle.</p>
+
         <div>
           <div class="divider"></div>
         <div class="row">

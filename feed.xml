@@ -6,8 +6,8 @@
 </description>
     <link>http://denta.co/</link>
     <atom:link href="http://denta.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 04 Jul 2016 16:17:56 -0700</pubDate>
-    <lastBuildDate>Mon, 04 Jul 2016 16:17:56 -0700</lastBuildDate>
+    <pubDate>Mon, 18 Jul 2016 22:14:34 -0700</pubDate>
+    <lastBuildDate>Mon, 18 Jul 2016 22:14:34 -0700</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
@@ -161,6 +161,14 @@ $(window).load(function() {
 &lt;p&gt;Here, we are telling git to remember what the repository looked like at this point in time, and attaching a message of “put styles in a separate file.” This will help us remember in the future where the first commit was that added the style.css file.&lt;/p&gt;
 
 &lt;h2 id=&quot;removing-files&quot;&gt;Removing files&lt;/h2&gt;
+
+&lt;p&gt;Removing files can be a tad tricky. If we wanted to completely remove the ‘style.css’ file, we could run:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git rm style.css
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The file would than be removed from our repo, and deleted. However; sometimes we delete files manually. If you delete a file from your file explorer, git will not recognize that you wanted to delete the file from your repo. You can fix this by doing the same ‘git rm’ commad as seen above, or when you add all of your other files, you can use ‘git add -u’ to ‘update’ your repository to the current structure. The ‘u’ stands for update, if I was too subtle.&lt;/p&gt;
 </description>
         <pubDate>Tue, 03 May 2016 02:15:31 -0700</pubDate>
         <link>http://denta.co/git-part-two-commiting</link>
@@ -185,7 +193,7 @@ $(window).load(function() {
 
 &lt;p&gt;This section of the tutorial will cover how to add files to a repository. This section will also cover what it means to ‘stage’ and ‘commit’ files, and how both of these actions are different from a ‘push’.&lt;/p&gt;
 
-&lt;p&gt;For the remainder of the tutorial, we will focus on Shoes for Snakes. This is a fictitious non-profit we made up, who we will be helping get their website ready for production.&lt;/p&gt;
+&lt;p&gt;For the remainder of the tutorial, we will focus on Shoes for Snakes. This is a fictitious non-profit we made up. We will be helping them create their website, and get it ready for production. Feel free to follow along at &lt;a href=&quot;https://github.com/adenta/git-training&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;First, we will need to ‘clone’ our git repository. Think of a git repository as a bunch of files. We need to get these files onto whatever computer we are working on. To do this, we use the git clone command. The git clone command works by typing:&lt;/p&gt;
 
@@ -384,8 +392,6 @@ $(window).load(function() {
         
         <category>git</category>
         
-        <category>ServeIT</category>
-        
       </item>
     
       <item>
@@ -415,6 +421,9 @@ $(window).load(function() {
   &lt;li&gt;Intro to Branching&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;h2 id=&quot;cheatsheet&quot;&gt;Cheatsheet&lt;/h2&gt;
+&lt;p&gt;For additional help, check out &lt;a href=&quot;https://gist.github.com/richardcornish/4676556&quot;&gt;this&lt;/a&gt; website.&lt;/p&gt;
+
 &lt;p&gt;At this point, you should have git installed on your system. Run this command. You should get some sort of version number back.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git --version
@@ -438,7 +447,11 @@ $(window).load(function() {
     
       <item>
         <title>Sat Solver</title>
-        <description>&lt;p&gt;Today in class my professor was describing &lt;a href=&quot;http://nrich.maths.org/781/note&quot;&gt;this&lt;/a&gt; problem. We thought about it for a while, and than he started describing the brute force solution. His code was six nested for loops. I assumed there had to be a better way to represent this problem, so I wrote a script to solve this and other similar problems.&lt;/p&gt;
+        <description>&lt;div class=&quot;card-panel&quot;&gt;
+Today in class my professor was describing [this](http://nrich.maths.org/781/note) problem. We thought about it for a while, and than he started describing the brute force solution. His code was six nested for loops. I assumed there had to be a better way to represent this problem, so I wrote a script to solve this and other similar problems.
+&lt;/div&gt;
+
+&lt;div class=&quot;card-panel&quot;&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sets&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;itertools&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;permutations&lt;/span&gt;
@@ -476,9 +489,12 @@ $(window).load(function() {
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answerNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;problem&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;I am happy with the solution I arrived at, other than two small points. I wish I could get out of the habit of thinking of lists in terms of their indexes. You can see on line 37 where I am generating each mapping of numbers to letters, my dictionary comprehension relies on ‘range(len(trial))’. This solution also runs in n! time, but that is just because of how &lt;em&gt;hard&lt;/em&gt; of a problem it is.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;card-panel&quot;&gt;
+I am happy with the solution I arrived at, other than two small points. I wish I could get out of the habit of thinking of lists in terms of their indexes. You can see on line 37 where I am generating each mapping of numbers to letters, my dictionary comprehension relies on &#39;range(len(trial))&#39;. This solution also runs in n! time, but that is just because of how *hard* of a problem it is.
 
-&lt;p&gt;This problem is &lt;a href=&quot;https://en.wikipedia.org/wiki/NP-completeness&quot;&gt;NP-Complete&lt;/a&gt;. This explains why it has such a high complexity. It is important to note that this problem is bounded where n&amp;lt;10, as you can only have that many unique letters representing unique numbers.&lt;/p&gt;
+This problem is [NP-Complete](https://en.wikipedia.org/wiki/NP-completeness). This explains why it has such a high complexity. It is important to note that this problem is bounded where n&amp;lt;10, as you can only have that many unique letters representing unique numbers.
+&lt;/div&gt;
 </description>
         <pubDate>Wed, 30 Mar 2016 18:45:31 -0700</pubDate>
         <link>http://denta.co/sat-solver</link>

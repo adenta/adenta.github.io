@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 
   <title>Sat Solver</title>
-  <meta name="description" content="Today in class my professor was describing this problem. We thought about it for a while, and than he started describing the brute force solution. His code w...">
+  <meta name="description" content="Today in class my professor was describing [this](http://nrich.maths.org/781/note) problem. We thought about it for a while, and than he started describing t...">
 
   <link type="text/css" rel="stylesheet" href=" /assets/materialize/sass/materialize.css">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
@@ -83,14 +83,18 @@
 
     <div class="container">
       <div class="wrapper">
-        <article class="post card-panel">
+        <article class="post">
 
-  <header class="post-header">
+  <header class="post-header card-panel">
     <h1 class="post-title truncate">Sat Solver</h1>
   </header>
 
   <div class="post-content">
-    <p>Today in class my professor was describing <a href="http://nrich.maths.org/781/note">this</a> problem. We thought about it for a while, and than he started describing the brute force solution. His code was six nested for loops. I assumed there had to be a better way to represent this problem, so I wrote a script to solve this and other similar problems.</p>
+    <div class="card-panel">
+Today in class my professor was describing [this](http://nrich.maths.org/781/note) problem. We thought about it for a while, and than he started describing the brute force solution. His code was six nested for loops. I assumed there had to be a better way to represent this problem, so I wrote a script to solve this and other similar problems.
+</div>
+
+<div class="card-panel">
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sets</span> <span class="kn">import</span> <span class="n">Set</span>
 <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">permutations</span>
@@ -128,9 +132,12 @@
     <span class="k">if</span><span class="p">(</span><span class="n">firstNumber</span> <span class="o">+</span> <span class="n">secondNumber</span> <span class="o">==</span> <span class="n">answerNumber</span><span class="p">):</span>
         <span class="k">print</span> <span class="n">problem</span></code></pre></figure>
 
-<p>I am happy with the solution I arrived at, other than two small points. I wish I could get out of the habit of thinking of lists in terms of their indexes. You can see on line 37 where I am generating each mapping of numbers to letters, my dictionary comprehension relies on ‘range(len(trial))’. This solution also runs in n! time, but that is just because of how <em>hard</em> of a problem it is.</p>
+</div>
+<div class="card-panel">
+I am happy with the solution I arrived at, other than two small points. I wish I could get out of the habit of thinking of lists in terms of their indexes. You can see on line 37 where I am generating each mapping of numbers to letters, my dictionary comprehension relies on 'range(len(trial))'. This solution also runs in n! time, but that is just because of how *hard* of a problem it is.
 
-<p>This problem is <a href="https://en.wikipedia.org/wiki/NP-completeness">NP-Complete</a>. This explains why it has such a high complexity. It is important to note that this problem is bounded where n&lt;10, as you can only have that many unique letters representing unique numbers.</p>
+This problem is [NP-Complete](https://en.wikipedia.org/wiki/NP-completeness). This explains why it has such a high complexity. It is important to note that this problem is bounded where n&lt;10, as you can only have that many unique letters representing unique numbers.
+</div>
 
   </div>
 
