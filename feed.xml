@@ -6,8 +6,8 @@
 </description>
     <link>http://denta.co/</link>
     <atom:link href="http://denta.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Jul 2016 22:14:34 -0700</pubDate>
-    <lastBuildDate>Mon, 18 Jul 2016 22:14:34 -0700</lastBuildDate>
+    <pubDate>Mon, 18 Jul 2016 22:17:46 -0700</pubDate>
+    <lastBuildDate>Mon, 18 Jul 2016 22:17:46 -0700</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
@@ -447,11 +447,7 @@ $(window).load(function() {
     
       <item>
         <title>Sat Solver</title>
-        <description>&lt;div class=&quot;card-panel&quot;&gt;
-Today in class my professor was describing [this](http://nrich.maths.org/781/note) problem. We thought about it for a while, and than he started describing the brute force solution. His code was six nested for loops. I assumed there had to be a better way to represent this problem, so I wrote a script to solve this and other similar problems.
-&lt;/div&gt;
-
-&lt;div class=&quot;card-panel&quot;&gt;
+        <description>&lt;p&gt;Today in class my professor was describing &lt;a href=&quot;http://nrich.maths.org/781/note&quot;&gt;this&lt;/a&gt; problem. We thought about it for a while, and than he started describing the brute force solution. His code was six nested for loops. I assumed there had to be a better way to represent this problem, so I wrote a script to solve this and other similar problems.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sets&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;itertools&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;permutations&lt;/span&gt;
@@ -489,12 +485,9 @@ Today in class my professor was describing [this](http://nrich.maths.org/781/not
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answerNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;problem&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/div&gt;
-&lt;div class=&quot;card-panel&quot;&gt;
-I am happy with the solution I arrived at, other than two small points. I wish I could get out of the habit of thinking of lists in terms of their indexes. You can see on line 37 where I am generating each mapping of numbers to letters, my dictionary comprehension relies on &#39;range(len(trial))&#39;. This solution also runs in n! time, but that is just because of how *hard* of a problem it is.
+&lt;p&gt;I am happy with the solution I arrived at, other than two small points. I wish I could get out of the habit of thinking of lists in terms of their indexes. You can see on line 37 where I am generating each mapping of numbers to letters, my dictionary comprehension relies on ‘range(len(trial))’. This solution also runs in n! time, but that is just because of how &lt;em&gt;hard&lt;/em&gt; of a problem it is.&lt;/p&gt;
 
-This problem is [NP-Complete](https://en.wikipedia.org/wiki/NP-completeness). This explains why it has such a high complexity. It is important to note that this problem is bounded where n&amp;lt;10, as you can only have that many unique letters representing unique numbers.
-&lt;/div&gt;
+&lt;p&gt;This problem is &lt;a href=&quot;https://en.wikipedia.org/wiki/NP-completeness&quot;&gt;NP-Complete&lt;/a&gt;. This explains why it has such a high complexity. It is important to note that this problem is bounded where n&amp;lt;10, as you can only have that many unique letters representing unique numbers.&lt;/p&gt;
 </description>
         <pubDate>Wed, 30 Mar 2016 18:45:31 -0700</pubDate>
         <link>http://denta.co/sat-solver</link>
