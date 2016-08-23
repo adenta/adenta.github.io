@@ -107,25 +107,28 @@
 
 <p>First, we will need to ‘clone’ our git repository. Think of a git repository as a bunch of files. We need to get these files onto whatever computer we are working on. To do this, we use the git clone command. The git clone command works by typing:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/adenta/git-tutorial-repo</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/adenta/git-tutorial-repo
+git checkout -b yourUsername 2051bcb3981ad3b9efaa73e3096c647513bbe4cb</code></pre></figure>
 
 <p>Here, we type ‘git clone’ to specify we want to clone a repository somewhere else. we follow this command with the URL of the repository. After you run this command through your terminal, you will have the repository on your desktop.</p>
 
+<p>The repository will contain all the history for the project. To get to the initial commit, we need to ‘checkout’ an older commit. Here, we are checking out an older commit, from a new branch. By typing your username, you are naming the branch with your username. Finally, we provide the commit that we want’s proper hash, so git knows which commit to grab.</p>
+
 <h2 id="adding-a-file">Adding a file</h2>
 
-<p>Now that we have our repository on our computer, we can look at the files, and make changes to it. If we open the ‘index.html’ in a web browser, we see the starts of a public website. If we look at the index.html in a code editor, we see that the style tag contains our style information.</p>
+<p>Now that we have our repository on our computer, we can look at the files, and make changes to it. If we open the ‘index.html’ in a web browser, we see the starts of a public website. If we look at the index.html in a code editor, <a href="https://github.com/adenta/git-tutorial-repo/blob/2051bcb3981ad3b9efaa73e3096c647513bbe4cb/index.html">we see that the style tag contains our style information</a>.</p>
 
 <p>If we want more than one page reading the same set of styles, we will need to move it to a separate file. To do this, we will create another file, called ‘style.css’. Create the style.css file in the same ‘git-tutorial-repo’ folder.</p>
 
-<p>Copy the styles from the style tag, and reference the external file from the index.html file. Your directory should look like:</p>
+<p>Copy the styles from the style tag, and reference the external file from the index.html file. Your directory should  <strong>now</strong> look like this:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    git-tutorial-repo
-    --shoesforsnakes.svg
-    --index.html
-    --README.md
-    --style.css</code></pre></figure>
+      --shoesforsnakes.svg
+      --index.html
+      --README.md
+      --style.css</code></pre></figure>
 
-<p>Your index.html head tag should look like:</p>
+<p>Your index.html ‘head’ tag should look like:</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;head&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
@@ -163,7 +166,7 @@
   <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>And that is it! Adding a file to a git repo is just about adding a file to the folder the repo is in.</p>
+<p>And that is almost it! Adding a file to a git repo is just about as easy as adding a file to the folder the repo is in. All we need to do now is stage the file.</p>
 
 <h2 id="staging-the-file">Staging the file</h2>
 

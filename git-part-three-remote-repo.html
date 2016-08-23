@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 
-  <title>Intro to Git</title>
-  <meta name="description" content="Welcome to the first part of the ServeIT Github tutorial. This will be fast and painless.">
+  <title>Setting up a Remote Repository</title>
+  <meta name="description" content="This section of the tutorial assumes your git repo looks like this.">
 
   <link type="text/css" rel="stylesheet" href=" /assets/materialize/sass/materialize.css">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
@@ -20,7 +20,7 @@
   <script  src=" /assets/core.js "></script>
   <script  src=" /assets/masonry.js "></script>
 
-  <link rel="canonical" href="http://denta.co/git-intro">
+  <link rel="canonical" href="http://denta.co/git-part-three-remote-repo">
   <link rel="alternate" type="application/rss+xml" title="Andrew Denta" href="http://denta.co /feed.xml ">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -86,55 +86,47 @@
         <article class="post card-panel">
 
     <header class="post-header">
-        <h1 class="post-title truncate hide-on-med-and-down">Intro to Git</h1>
-        <h1 class="post-title flow-text hide-on-large-only">Intro to Git</h1>
+        <h1 class="post-title truncate hide-on-med-and-down">Setting up a Remote Repository</h1>
+        <h1 class="post-title flow-text hide-on-large-only">Setting up a Remote Repository</h1>
 
         <div class="divider"></div>
     </header>
 
     <div class="post-content">
-        <p>Welcome to the first part of the ServeIT Github tutorial. This will be fast and painless.</p>
+        <p><a href="https://github.com/adenta/git-tutorial-repo/tree/116f7f9d78a8c241fe70827757e5e21f323562bb">This section of the tutorial assumes your git repo looks like this.</a></p>
 
-<h2 id="what-is-git">What is Git?</h2>
-<p>Git is version control software. When you have many people working on a project, you need a way to track files. Git helps facilitate many people to work on the same project at the same time.</p>
+<h2 id="creating-the-repo">Creating the repo</h2>
 
-<h2 id="why-do-i-need-to-use-it">Why do I need to use it?</h2>
-<p>At Serve IT, we use Git to manage &amp; deploy our projects. It is easier to type ‘git clone’ and have a bunch of files suddenly appear on your computer, than it would be to copy them manually. It is also be easier to type ‘git push’ than it is to manually use something like FTP to make changes to an application server.</p>
+<p>Now that we have made a commit to our repository in a new branch, let’s find a place to put it. Log on to whatever service you use to manage git repos (Github, Gitlab, Bit Bucket, etc.). If you are an IU student, you will probably be using <a href="https://github.iu.edu/adenta">IU Github</a>.</p>
 
-<h2 id="how-do-i-get-it-set-up">How do I get it set up?</h2>
-<p>This tutorial is about how to use git effectively, not how to install it on your computer. If you need to install git, <a href="https://help.github.com/articles/set-up-git/">start here</a>. Windows Users will need to use their command prompt. Mac and Linux users will use their Terminal.</p>
+<p>For this tutorial, we will assume you are using github.</p>
 
-<p>This tutorial will serve as a basic introduction to Git. This tutorial will not cover <a href="https://desktop.github.com/">Github Desktop</a>. This is a graphic interface for Git. This is a useful tool, but not the purpose of this tutorial.</p>
+<p>When you arrive at the page, hit the ‘create new’ button in the upper right corner.
+<img src="/assets/images/git-create.png" alt="Create New" class="responsive-img" />
+From here, hit ‘New repository’.</p>
 
-<p><strong>We will cover:</strong></p>
+<p><img src="/assets/images/git-new.png" alt="New Repo" class="responsive-img" />
+At this screen, give your repository a name, and hit ‘Create Repository’. Now you will be on a page that looks like this.</p>
 
-<ol>
-  <li>Cloning, Adding, &amp; Staging files</li>
-  <li>Committing and Removing files</li>
-  <li>Setting up remote repositories.</li>
-  <li>Pushing to repositories</li>
-</ol>
+<p><img src="/assets/images/git-new.png" alt="Push Repo" class="responsive-img" /></p>
 
-<h2 id="cheatsheet">Cheatsheet</h2>
-<p>For additional help, check out <a href="https://gist.github.com/richardcornish/4676556">this</a> website.</p>
+<h2 id="security-config">Security Config</h2>
 
-<p>At this point, you should have git installed on your system. Run this command. You should get some sort of version number back.</p>
+<p>Leave this page open, and head back into your terminal. Use <a href="https://help.github.com/articles/generating-an-ssh-key/">these</a> documents to setup SSH keys. We will be adding more documentation on this step soon, please reach out if you have any questions.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git --version
-</code></pre>
-</div>
-
-<p>For me, when I run this command, I see ‘git version 1.9.1’ as the output on the terminal. Make sure this command works before proceeding.</p>
+<p>Once the keys are added, you should be ready to push your repo to Github!</p>
 
         <div>
           <div class="divider"></div>
         <div class="row">
           <div class="col s6 left-align">&nbsp;
             
+            <strong>Previous:</strong> <a href="/git-part-two-commiting">Committing and Removing Files</a>
+            
           </div>
             <div class="col s6 right-align">
              
-           <strong>Next:</strong> <a href="/shell-demo">Shell Commands Crash Course</a>
+           <strong>Next:</strong> <a href="/git-part-four-pushing">Pushing</a>
             
           &nbsp;</div>
         </div>

@@ -6,8 +6,8 @@
 </description>
     <link>http://denta.co/</link>
     <atom:link href="http://denta.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Jul 2016 03:04:48 -0700</pubDate>
-    <lastBuildDate>Sun, 24 Jul 2016 03:04:48 -0700</lastBuildDate>
+    <pubDate>Tue, 23 Aug 2016 07:48:24 -0700</pubDate>
+    <lastBuildDate>Tue, 23 Aug 2016 07:48:24 -0700</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
@@ -15,8 +15,8 @@
         <description>&lt;p&gt;Lots of cool stuff at the computer history museum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 23 Jul 2016 01:45:31 -0700</pubDate>
-        <link>http://denta.co/computer-History</link>
-        <guid isPermaLink="true">http://denta.co/computer-History</guid>
+        <link>http://denta.co/Computer-History</link>
+        <guid isPermaLink="true">http://denta.co/Computer-History</guid>
         
         
       </item>
@@ -127,6 +127,79 @@ this might work in this illustration:&lt;/p&gt;
       </item>
     
       <item>
+        <title>Pushing</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/adenta/git-tutorial-repo/tree/116f7f9d78a8c241fe70827757e5e21f323562bb&quot;&gt;This section of the tutorial assumes your git repo looks like this.&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;right&quot;&gt;
+&lt;img src=&quot;/assets/images/patrick.gif&quot; /&gt;
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We need to push our files to our newly created repo. We last left off at this page:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/git-new.png&quot; alt=&quot;Push Repo&quot; class=&quot;responsive-img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Notice this snippet the page asks us to run if we have an existing repo:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote add origin git@github.iu.edu:NAME/git-training.git
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Lets walk through what we are doing. First, ‘git remote add origin …’ Is adding a new remote repository location to your git repo on your computer. the remote that we are adding has the name of origin, and is located at git@github.iu.edu:NAME/git-training.git (where NAME is a stand-in for your name). We could add a bunch of different remote servers in this manner, but we only need one.&lt;/p&gt;
+
+&lt;p&gt;Now we tell git to push the repo from our local computer to the GitHub repository with the git push -u origin master command.&lt;/p&gt;
+
+&lt;p&gt;And thats it! If you did not recieve error messages, you should see your repository on your Github Account!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 05 May 2016 02:15:31 -0700</pubDate>
+        <link>http://denta.co/git-part-four-pushing</link>
+        <guid isPermaLink="true">http://denta.co/git-part-four-pushing</guid>
+        
+        
+        <category>series</category>
+        
+        <category>git</category>
+        
+      </item>
+    
+      <item>
+        <title>Setting up a Remote Repository</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/adenta/git-tutorial-repo/tree/116f7f9d78a8c241fe70827757e5e21f323562bb&quot;&gt;This section of the tutorial assumes your git repo looks like this.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-the-repo&quot;&gt;Creating the repo&lt;/h2&gt;
+
+&lt;p&gt;Now that we have made a commit to our repository in a new branch, let’s find a place to put it. Log on to whatever service you use to manage git repos (Github, Gitlab, Bit Bucket, etc.). If you are an IU student, you will probably be using &lt;a href=&quot;https://github.iu.edu/adenta&quot;&gt;IU Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For this tutorial, we will assume you are using github.&lt;/p&gt;
+
+&lt;p&gt;When you arrive at the page, hit the ‘create new’ button in the upper right corner.
+&lt;img src=&quot;/assets/images/git-create.png&quot; alt=&quot;Create New&quot; class=&quot;responsive-img&quot; /&gt;
+From here, hit ‘New repository’.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/git-new.png&quot; alt=&quot;New Repo&quot; class=&quot;responsive-img&quot; /&gt;
+At this screen, give your repository a name, and hit ‘Create Repository’. Now you will be on a page that looks like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/git-new.png&quot; alt=&quot;Push Repo&quot; class=&quot;responsive-img&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;security-config&quot;&gt;Security Config&lt;/h2&gt;
+
+&lt;p&gt;Leave this page open, and head back into your terminal. Use &lt;a href=&quot;https://help.github.com/articles/generating-an-ssh-key/&quot;&gt;these&lt;/a&gt; documents to setup SSH keys. We will be adding more documentation on this step soon, please reach out if you have any questions.&lt;/p&gt;
+
+&lt;p&gt;Once the keys are added, you should be ready to push your repo to Github!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 04 May 2016 02:15:31 -0700</pubDate>
+        <link>http://denta.co/git-part-three-remote-repo</link>
+        <guid isPermaLink="true">http://denta.co/git-part-three-remote-repo</guid>
+        
+        
+        <category>series</category>
+        
+        <category>git</category>
+        
+      </item>
+    
+      <item>
         <title>Committing and Removing Files</title>
         <description>&lt;p&gt;This section of the tutorial will talk about the ‘commit’ step of the git work flow. We will also look at what happens when you remove a file from a git repo, and how to tell git about that changed file.&lt;/p&gt;
 
@@ -171,6 +244,8 @@ $(window).load(function() {
 
 &lt;p&gt;Here, we are telling git to remember what the repository looked like at this point in time, and attaching a message of “put styles in a separate file.” This will help us remember in the future where the first commit was that added the style.css file.&lt;/p&gt;
 
+&lt;p&gt;You can view why my repo looked like &lt;a href=&quot;https://github.com/adenta/git-tutorial-repo/tree/116f7f9d78a8c241fe70827757e5e21f323562bb&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;removing-files&quot;&gt;Removing files&lt;/h2&gt;
 
 &lt;p&gt;Removing files can be a tad tricky. If we wanted to completely remove the ‘style.css’ file, we could run:&lt;/p&gt;
@@ -179,7 +254,7 @@ $(window).load(function() {
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;The file would than be removed from our repo, and deleted. However; sometimes we delete files manually. If you delete a file from your file explorer, git will not recognize that you wanted to delete the file from your repo. You can fix this by doing the same ‘git rm’ commad as seen above, or when you add all of your other files, you can use ‘git add -u’ to ‘update’ your repository to the current structure. The ‘u’ stands for update, if I was too subtle.&lt;/p&gt;
+&lt;p&gt;The file would than be removed from our repo, and staged to be deleted. However; sometimes we delete files manually. If you delete a file from your file explorer, git will not recognize that you wanted to delete the file from your repo. The file would stay in your repo, as the deletion was never staged. You can fix this by doing the same ‘git rm’ command as seen above, or when you add all of your other files, you can use ‘git add -u’ to ‘update’ your repository to the current structure. The ‘u’ stands for update, if I was too subtle.&lt;/p&gt;
 </description>
         <pubDate>Tue, 03 May 2016 02:15:31 -0700</pubDate>
         <link>http://denta.co/git-part-two-commiting</link>
@@ -208,25 +283,28 @@ $(window).load(function() {
 
 &lt;p&gt;First, we will need to ‘clone’ our git repository. Think of a git repository as a bunch of files. We need to get these files onto whatever computer we are working on. To do this, we use the git clone command. The git clone command works by typing:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/adenta/git-tutorial-repo&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/adenta/git-tutorial-repo
+git checkout -b yourUsername 2051bcb3981ad3b9efaa73e3096c647513bbe4cb&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here, we type ‘git clone’ to specify we want to clone a repository somewhere else. we follow this command with the URL of the repository. After you run this command through your terminal, you will have the repository on your desktop.&lt;/p&gt;
 
+&lt;p&gt;The repository will contain all the history for the project. To get to the initial commit, we need to ‘checkout’ an older commit. Here, we are checking out an older commit, from a new branch. By typing your username, you are naming the branch with your username. Finally, we provide the commit that we want’s proper hash, so git knows which commit to grab.&lt;/p&gt;
+
 &lt;h2 id=&quot;adding-a-file&quot;&gt;Adding a file&lt;/h2&gt;
 
-&lt;p&gt;Now that we have our repository on our computer, we can look at the files, and make changes to it. If we open the ‘index.html’ in a web browser, we see the starts of a public website. If we look at the index.html in a code editor, we see that the style tag contains our style information.&lt;/p&gt;
+&lt;p&gt;Now that we have our repository on our computer, we can look at the files, and make changes to it. If we open the ‘index.html’ in a web browser, we see the starts of a public website. If we look at the index.html in a code editor, &lt;a href=&quot;https://github.com/adenta/git-tutorial-repo/blob/2051bcb3981ad3b9efaa73e3096c647513bbe4cb/index.html&quot;&gt;we see that the style tag contains our style information&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;If we want more than one page reading the same set of styles, we will need to move it to a separate file. To do this, we will create another file, called ‘style.css’. Create the style.css file in the same ‘git-tutorial-repo’ folder.&lt;/p&gt;
 
-&lt;p&gt;Copy the styles from the style tag, and reference the external file from the index.html file. Your directory should look like:&lt;/p&gt;
+&lt;p&gt;Copy the styles from the style tag, and reference the external file from the index.html file. Your directory should  &lt;strong&gt;now&lt;/strong&gt; look like this:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    git-tutorial-repo
-    --shoesforsnakes.svg
-    --index.html
-    --README.md
-    --style.css&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+      --shoesforsnakes.svg
+      --index.html
+      --README.md
+      --style.css&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Your index.html head tag should look like:&lt;/p&gt;
+&lt;p&gt;Your index.html ‘head’ tag should look like:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -264,7 +342,7 @@ $(window).load(function() {
   &lt;span class=&quot;nl&quot;&gt;font-style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;italic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;And that is it! Adding a file to a git repo is just about adding a file to the folder the repo is in.&lt;/p&gt;
+&lt;p&gt;And that is almost it! Adding a file to a git repo is just about as easy as adding a file to the folder the repo is in. All we need to do now is stage the file.&lt;/p&gt;
 
 &lt;h2 id=&quot;staging-the-file&quot;&gt;Staging the file&lt;/h2&gt;
 
@@ -423,13 +501,10 @@ $(window).load(function() {
 &lt;p&gt;&lt;strong&gt;We will cover:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Cloning a repository&lt;/li&gt;
-  &lt;li&gt;Adding and Staging files&lt;/li&gt;
+  &lt;li&gt;Cloning, Adding, &amp;amp; Staging files&lt;/li&gt;
   &lt;li&gt;Committing and Removing files&lt;/li&gt;
-  &lt;li&gt;Making changes to a repository.&lt;/li&gt;
-  &lt;li&gt;Pushing to repositories&lt;/li&gt;
   &lt;li&gt;Setting up remote repositories.&lt;/li&gt;
-  &lt;li&gt;Intro to Branching&lt;/li&gt;
+  &lt;li&gt;Pushing to repositories&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;cheatsheet&quot;&gt;Cheatsheet&lt;/h2&gt;
@@ -453,72 +528,6 @@ $(window).load(function() {
         <category>git</category>
         
         <category>ServeIT</category>
-        
-      </item>
-    
-      <item>
-        <title>Sat Solver</title>
-        <description>&lt;p&gt;Today in class my professor was describing &lt;a href=&quot;http://nrich.maths.org/781/note&quot;&gt;this&lt;/a&gt; problem. We thought about it for a while, and than he started describing the brute force solution. His code was six nested for loops. I assumed there had to be a better way to represent this problem, so I wrote a script to solve this and other similar problems.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sets&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;itertools&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;permutations&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;makeWord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prompt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;raw_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prompt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;letter&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;letter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;makeWord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; First: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;makeWord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Second: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;makeWord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Answer: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;probVars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;trials&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;permutations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;probVars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;probVars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;letters in total, &amp;amp;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trials&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; permutations.&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trial&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trials&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buildNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;builtList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;letter&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;builtList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;problem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;letter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;builtList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;problem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;probVars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))}&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;firstNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buildNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;secondNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buildNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;answerNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buildNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answerNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;problem&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;I am happy with the solution I arrived at, other than two small points. I wish I could get out of the habit of thinking of lists in terms of their indexes. You can see on line 37 where I am generating each mapping of numbers to letters, my dictionary comprehension relies on ‘range(len(trial))’. This solution also runs in n! time, but that is just because of how &lt;em&gt;hard&lt;/em&gt; of a problem it is.&lt;/p&gt;
-
-&lt;p&gt;This problem is &lt;a href=&quot;https://en.wikipedia.org/wiki/NP-completeness&quot;&gt;NP-Complete&lt;/a&gt;. This explains why it has such a high complexity. It is important to note that this problem is bounded where n&amp;lt;10, as you can only have that many unique letters representing unique numbers.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 30 Mar 2016 18:45:31 -0700</pubDate>
-        <link>http://denta.co/sat-solver</link>
-        <guid isPermaLink="true">http://denta.co/sat-solver</guid>
-        
-        
-        <category>python</category>
-        
-      </item>
-    
-      <item>
-        <title>Exodus Easter Egg Hunt</title>
-        <description>&lt;p&gt;Great time with Exodus Church this morning at 3rd street park here in Bloomington! Not too many pictures, because it was oepn to the public, and they didn’t want me taking pictures of anyone who did not go to the Church.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 26 Mar 2016 10:45:31 -0700</pubDate>
-        <link>http://denta.co/exodus-easter</link>
-        <guid isPermaLink="true">http://denta.co/exodus-easter</guid>
-        
-        
-        <category>balloons</category>
         
       </item>
     

@@ -136,6 +136,8 @@ $(window).load(function() {
 
 <p>Here, we are telling git to remember what the repository looked like at this point in time, and attaching a message of “put styles in a separate file.” This will help us remember in the future where the first commit was that added the style.css file.</p>
 
+<p>You can view why my repo looked like <a href="https://github.com/adenta/git-tutorial-repo/tree/116f7f9d78a8c241fe70827757e5e21f323562bb">here</a></p>
+
 <h2 id="removing-files">Removing files</h2>
 
 <p>Removing files can be a tad tricky. If we wanted to completely remove the ‘style.css’ file, we could run:</p>
@@ -144,7 +146,7 @@ $(window).load(function() {
 </code></pre>
 </div>
 
-<p>The file would than be removed from our repo, and deleted. However; sometimes we delete files manually. If you delete a file from your file explorer, git will not recognize that you wanted to delete the file from your repo. You can fix this by doing the same ‘git rm’ commad as seen above, or when you add all of your other files, you can use ‘git add -u’ to ‘update’ your repository to the current structure. The ‘u’ stands for update, if I was too subtle.</p>
+<p>The file would than be removed from our repo, and staged to be deleted. However; sometimes we delete files manually. If you delete a file from your file explorer, git will not recognize that you wanted to delete the file from your repo. The file would stay in your repo, as the deletion was never staged. You can fix this by doing the same ‘git rm’ command as seen above, or when you add all of your other files, you can use ‘git add -u’ to ‘update’ your repository to the current structure. The ‘u’ stands for update, if I was too subtle.</p>
 
         <div>
           <div class="divider"></div>
@@ -156,6 +158,8 @@ $(window).load(function() {
           </div>
             <div class="col s6 right-align">
              
+           <strong>Next:</strong> <a href="/git-part-three-remote-repo">Setting up a Remote Repository</a>
+            
           &nbsp;</div>
         </div>
       </div>
