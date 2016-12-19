@@ -6,9 +6,26 @@
 </description>
     <link>http://denta.co/</link>
     <atom:link href="http://denta.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Oct 2016 14:35:59 -0400</pubDate>
-    <lastBuildDate>Wed, 19 Oct 2016 14:35:59 -0400</lastBuildDate>
+    <pubDate>Sun, 18 Dec 2016 20:42:53 -0500</pubDate>
+    <lastBuildDate>Sun, 18 Dec 2016 20:42:53 -0500</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
+    
+      <item>
+        <title>Go Finance</title>
+        <description>&lt;p&gt;My &lt;a href=&quot;https://www.linkedin.com/in/mitchel-hill-4205b58b&quot;&gt;sister’s boyfriend&lt;/a&gt; and I had this idea for a game about gerrymandering for a while. I have tried my best to explain it through slides and an HTML5 video demo.&lt;/p&gt;
+
+&lt;p&gt;I think this would be a great tool for the classroom. A quick game that would teach people how gerrymandering works. I have suspended work on this project, until I can find more teachers interested in using this in their classrooms. Feel free to reach out at my contact info in the footer.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 05 Dec 2016 03:45:31 -0500</pubDate>
+        <link>http://denta.co/go-finance</link>
+        <guid isPermaLink="true">http://denta.co/go-finance</guid>
+        
+        
+        <category>project</category>
+        
+        <category>Go</category>
+        
+      </item>
     
       <item>
         <title>Computer History Museum</title>
@@ -480,54 +497,6 @@ $(window).load(function() {
         <category>series</category>
         
         <category>git</category>
-        
-      </item>
-    
-      <item>
-        <title>Intro to Git</title>
-        <description>&lt;p&gt;Welcome to the first part of the ServeIT Github tutorial. This will be fast and painless.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-git&quot;&gt;What is Git?&lt;/h2&gt;
-&lt;p&gt;Git is version control software. When you have many people working on a project, you need a way to track files. Git helps facilitate many people to work on the same project at the same time.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-do-i-need-to-use-it&quot;&gt;Why do I need to use it?&lt;/h2&gt;
-&lt;p&gt;At Serve IT, we use Git to manage &amp;amp; deploy our projects. It is easier to type ‘git clone’ and have a bunch of files suddenly appear on your computer, than it would be to copy them manually. It is also be easier to type ‘git push’ than it is to manually use something like FTP to make changes to an application server.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-do-i-get-it-set-up&quot;&gt;How do I get it set up?&lt;/h2&gt;
-&lt;p&gt;This tutorial is about how to use git effectively, not how to install it on your computer. If you need to install git, &lt;a href=&quot;https://help.github.com/articles/set-up-git/&quot;&gt;start here&lt;/a&gt;. Windows Users will need to use their command prompt. Mac and Linux users will use their Terminal.&lt;/p&gt;
-
-&lt;p&gt;This tutorial will serve as a basic introduction to Git. This tutorial will not cover &lt;a href=&quot;https://desktop.github.com/&quot;&gt;Github Desktop&lt;/a&gt;. This is a graphic interface for Git. This is a useful tool, but not the purpose of this tutorial.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;We will cover:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Cloning, Adding, &amp;amp; Staging files&lt;/li&gt;
-  &lt;li&gt;Committing and Removing files&lt;/li&gt;
-  &lt;li&gt;Setting up remote repositories.&lt;/li&gt;
-  &lt;li&gt;Pushing to repositories&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;cheatsheet&quot;&gt;Cheatsheet&lt;/h2&gt;
-&lt;p&gt;For additional help, check out &lt;a href=&quot;https://gist.github.com/richardcornish/4676556&quot;&gt;this&lt;/a&gt; website.&lt;/p&gt;
-
-&lt;p&gt;At this point, you should have git installed on your system. Run this command. You should get some sort of version number back.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git --version
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;For me, when I run this command, I see ‘git version 1.9.1’ as the output on the terminal. Make sure this command works before proceeding.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 01 May 2016 04:45:31 -0400</pubDate>
-        <link>http://denta.co/git-intro</link>
-        <guid isPermaLink="true">http://denta.co/git-intro</guid>
-        
-        
-        <category>series</category>
-        
-        <category>git</category>
-        
-        <category>ServeIT</category>
         
       </item>
     
