@@ -197,7 +197,7 @@ function processResults(d) {
 
 };
 $(document).ready(function() {
-    setInterval(callApi, 2000);
+    setInterval(callApi, 500);
     callApi();
 
     $('#scoringSystem').change(function(){
