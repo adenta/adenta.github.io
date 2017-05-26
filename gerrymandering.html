@@ -115,11 +115,13 @@ this might work in this illustration:</p>
 
 <p>I have tried to make useful things for the open source community before, but always seem to fall short. I will be releasing the repository on github soon, but am not sure how useful it will be to others. When scraping the excel files, about 5% of the data was was not scraped properly. I did not need it for my analysis. It seems the issue was in the order that the political races were listed. If the first race was not the winning race, than my scraper did not return the proper output.</p>
 
-<p>When reading in the votes for each race, There seemed to be four cases. For example, with the number 56789, it might appear:
- - As a string (eg: “56,789”)
- - As a list (eg: “[56,789]”)
- - As a floating point (eg: 56789.0)
- - As a string saying, “Unopposed”</p>
+<p>When reading in the votes for each race, There seemed to be four cases. For example, with the number 56789, it might appear:</p>
+<ul>
+  <li>As a string (eg: “56,789”)</li>
+  <li>As a list (eg: “[56,789]”)</li>
+  <li>As a floating point (eg: 56789.0)</li>
+  <li>As a string saying, “Unopposed”</li>
+</ul>
 
 <p>For my sake, I saved unopposed elections with a flag of 0. I gave missing elections a flag of -1. I see this was a bad decision for others to use my data. I should have saved the flags as strings, leaving unopposed elections alone. This would have been more semantic. This would have also prevented people from doing some bad math, treating the -1’s and 0’s as literal values.</p>
 

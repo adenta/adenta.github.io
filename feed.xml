@@ -6,9 +6,9 @@
 </description>
     <link>http://denta.co/</link>
     <atom:link href="http://denta.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 Jan 2017 20:06:20 -0500</pubDate>
-    <lastBuildDate>Tue, 31 Jan 2017 20:06:20 -0500</lastBuildDate>
-    <generator>Jekyll v3.1.3</generator>
+    <pubDate>Fri, 26 May 2017 11:53:38 -0400</pubDate>
+    <lastBuildDate>Fri, 26 May 2017 11:53:38 -0400</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>Go Finance</title>
@@ -56,6 +56,36 @@
         <category>Materialize</category>
         
         <category>Gulp</category>
+        
+      </item>
+    
+      <item>
+        <title>Indy 500 Dashboard</title>
+        <description>&lt;h2 id=&quot;what-is-this&quot;&gt;What is this?&lt;/h2&gt;
+
+&lt;p&gt;My family likes to have a contest to see who can get the most predictions right for the Indy 500. I wrote a quick dashboard, and we were able to see in real time who was ‘winning’ based on our picks. This page used to point at the live Indy 500 endpoint, but it is currently switched to a dummy server I set up on Heroku to serve some test data, that we can use next year if we want to modify this. I did not do so well, The guy I picked to win was &lt;a href=&quot;http://espn.go.com/racing/indycar/story/_/id/15812395/juan-pablo-montoya-indianapolis-500-crash-lap-64&quot;&gt;out&lt;/a&gt; at lap 64.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-does-scoring-work&quot;&gt;How does scoring work?&lt;/h2&gt;
+
+&lt;h3 id=&quot;original&quot;&gt;Original&lt;/h3&gt;
+
+&lt;p&gt;For the 2016 Indy 500, you picked three racers. You received six points if you guessed who came in first, three points if you guessed who came in second place or better, and you received one point if you guessed who came in third place or better. This system worked, but is not what the dashboard currently reflects.&lt;/p&gt;
+
+&lt;h3 id=&quot;modified&quot;&gt;Modified&lt;/h3&gt;
+
+&lt;p&gt;I was playing around with alternative scoring systems, and arrived on something I liked better. In the alternative system seen below, each participant picks who they thought would land in the top three. For each racer a participant chose, we take the total number of racers, and subtract the placing the racer achieved. This gives us a metric with a minimum value of six and a maximum of three times the number of racers. This shows how good each participant is at guessing who will do well in the race. You can see both systems by changing the toggle seen below.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/assets/js-embeds/indy500.js&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Sun, 29 May 2016 04:45:31 -0400</pubDate>
+        <link>http://denta.co/500</link>
+        <guid isPermaLink="true">http://denta.co/500</guid>
+        
+        
+        <category>Javascript</category>
+        
+        <category>hidden</category>
         
       </item>
     
@@ -124,11 +154,13 @@ this might work in this illustration:&lt;/p&gt;
 
 &lt;p&gt;I have tried to make useful things for the open source community before, but always seem to fall short. I will be releasing the repository on github soon, but am not sure how useful it will be to others. When scraping the excel files, about 5% of the data was was not scraped properly. I did not need it for my analysis. It seems the issue was in the order that the political races were listed. If the first race was not the winning race, than my scraper did not return the proper output.&lt;/p&gt;
 
-&lt;p&gt;When reading in the votes for each race, There seemed to be four cases. For example, with the number 56789, it might appear:
- - As a string (eg: “56,789”)
- - As a list (eg: “[56,789]”)
- - As a floating point (eg: 56789.0)
- - As a string saying, “Unopposed”&lt;/p&gt;
+&lt;p&gt;When reading in the votes for each race, There seemed to be four cases. For example, with the number 56789, it might appear:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;As a string (eg: “56,789”)&lt;/li&gt;
+  &lt;li&gt;As a list (eg: “[56,789]”)&lt;/li&gt;
+  &lt;li&gt;As a floating point (eg: 56789.0)&lt;/li&gt;
+  &lt;li&gt;As a string saying, “Unopposed”&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;For my sake, I saved unopposed elections with a flag of 0. I gave missing elections a flag of -1. I see this was a bad decision for others to use my data. I should have saved the flags as strings, leaving unopposed elections alone. This would have been more semantic. This would have also prevented people from doing some bad math, treating the -1’s and 0’s as literal values.&lt;/p&gt;
 </description>
@@ -382,114 +414,6 @@ git checkout -b yourUsername 2051bcb3981ad3b9efaa73e3096c647513bbe4cb&lt;/code&g
         <pubDate>Sun, 01 May 2016 05:00:31 -0400</pubDate>
         <link>http://denta.co/git-part-one-adding-files</link>
         <guid isPermaLink="true">http://denta.co/git-part-one-adding-files</guid>
-        
-        
-        <category>series</category>
-        
-        <category>git</category>
-        
-      </item>
-    
-      <item>
-        <title>Shell Commands Crash Course</title>
-        <description>&lt;h2 id=&quot;what-is-a-shell&quot;&gt;What is a Shell&lt;/h2&gt;
-
-&lt;p&gt;A shell is a tool we use to interact with a computer. It is pretty powerful. There are a few basic commands that will help you navigate the computer using a shell.&lt;/p&gt;
-
-&lt;h2 id=&quot;frequently-used-shell-commands&quot;&gt;Frequently Used Shell Commands&lt;/h2&gt;
-
-&lt;h3 id=&quot;ls&quot;&gt;ls&lt;/h3&gt;
-
-&lt;p&gt;ls is a command that lists all files in the current directory. If you had a directory that had three files in it, file1.txt, file2.txt, and file3.txt, and you ran ls, you would see something like:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~# ls
-    file1.txt  file2.txt  file3.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;cd&quot;&gt;cd&lt;/h3&gt;
-
-&lt;p&gt;cd is a command that changes what directory you are currently in. If you are currently in directory A, and want to go up one level, you would use ‘../’ as the directory you want to change to. For example, if you have a folder called ‘Downloads’, you could access that directory contents by running cd Downloads:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~# &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;Downloads/
-    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~/Downloads#&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;mkdir&quot;&gt;mkdir&lt;/h3&gt;
-
-&lt;p&gt;mkdir is a command that creates a new directory. For example, to create a new directory called ‘files’ you would run ‘mkdir files’ as seen here:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~# ls         
-    Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
-    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~# mkdir files
-    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~# ls
-    Desktop    Downloads  Pictures  Templates  files
-    Documents  Music      Public    Videos&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;nano&quot;&gt;nano&lt;/h3&gt;
-
-&lt;p&gt;nano opens a file in the nano text editor. If you want to create a file, you can run nano to create that file, and open it.&lt;/p&gt;
-
-&lt;p&gt;We can see a demo of nano in action in the below demonstration.&lt;/p&gt;
-
-&lt;h3 id=&quot;cat&quot;&gt;cat&lt;/h3&gt;
-
-&lt;p&gt;cat prints the contents of a file. If we have a file named ‘file.txt’ which contains the words ‘this is a file’, we can see its contents using cat.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;(trusty)root@localhost:~# &lt;/span&gt;ls
-Desktop    Downloads  Music     Public     Videos
-Documents  file.txt   Pictures  Templates
-&lt;span class=&quot;gp&quot;&gt;(trusty)root@localhost:~# &lt;/span&gt;cat file.txt
-this is a file&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;rm&quot;&gt;rm&lt;/h3&gt;
-
-&lt;p&gt;rm is a dangerous command. It removes files. If we have a text file named ‘file.txt’ we can remove it with rm:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;(trusty)root@localhost:~# &lt;/span&gt;ls
-Desktop    Downloads  Music     Public     Videos
-Documents  file.txt   Pictures  Templates
-&lt;span class=&quot;gp&quot;&gt;(trusty)root@localhost:~# &lt;/span&gt;rm file.txt
-&lt;span class=&quot;gp&quot;&gt;(trusty)root@localhost:~# &lt;/span&gt;ls
-Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
-&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~#&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;demonstration&quot;&gt;Demonstration&lt;/h2&gt;
-
-&lt;p&gt;Here is a short demo making use of all of these commands.&lt;/p&gt;
-
-&lt;div&gt;&lt;b&gt;This terminal recording can be found at &lt;a href=&quot;https://asciinema.org/a/34tyjhehmftwo04lbpekw3f4d&quot;&gt; asciinema.org&lt;/a&gt;.&lt;/b&gt;&lt;/div&gt;
-
-&lt;div class=&quot;hide-on-large-only&quot;&gt;
-  &lt;a href=&quot;https://asciinema.org/a/34tyjhehmftwo04lbpekw3f4d&quot;&gt;&lt;img class=&quot;responsive-img&quot; src=&quot;https://asciinema.org/a/34tyjhehmftwo04lbpekw3f4d.png&quot; width=&quot;836&quot; /&gt;&lt;/a&gt;
-
-&lt;/div&gt;
-&lt;div id=&quot;asciinemaContainer&quot; class=&quot;center-align hide-on-med-and-down &quot;&gt;
-  &lt;div id=&quot;asciiLoader&quot; class=&quot;preloader-wrapper big active&quot;&gt;
-    &lt;div class=&quot;spinner-layer&quot;&gt;
-      &lt;div class=&quot;circle-clipper left&quot;&gt;
-        &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;div class=&quot;gap-patch&quot;&gt;
-        &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;div class=&quot;circle-clipper right&quot;&gt;
-        &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://asciinema.org/a/34tyjhehmftwo04lbpekw3f4d.js&quot; id=&quot;asciicast-34tyjhehmftwo04lbpekw3f4d&quot; async=&quot;&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-$(window).load(function() {
-
-  $(&quot;#asciiLoader&quot;).hide();
-
- });
-
-
-
-&lt;/script&gt;
-&lt;/div&gt;
-
-</description>
-        <pubDate>Sun, 01 May 2016 04:50:31 -0400</pubDate>
-        <link>http://denta.co/shell-demo</link>
-        <guid isPermaLink="true">http://denta.co/shell-demo</guid>
         
         
         <category>series</category>
