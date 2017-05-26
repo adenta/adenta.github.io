@@ -25,15 +25,6 @@ function renderHTML() {
     document.write("<\/p>");
     document.write("<div class=\" switch\">");
     document.write("<b>");
-    document.write("Score: ");
-    document.write("<\/b>");
-    document.write("    <label>");
-    document.write("      Original");
-    document.write("      <input id=\"scoringSystem\" type=\"checkbox\">");
-    document.write("      <span class=\"lever\"><\/span>");
-    document.write("      Modified");
-    document.write("    <\/label>");
-    document.write("  <\/div>");
     document.write("<table class=\"responsive-table \">");
     document.write("  <thead>");
     document.write("  <td>Name<\/td>");
@@ -175,7 +166,7 @@ function processResults(d) {
 
     family.forEach(function(e) {
 
-      var scoringSystem = (document.getElementById('scoringSystem').checked)? buisnessLogic.modified : buisnessLogic.original;
+      var scoringSystem = buisnessLogic.original;
         var score = scoringSystem(e, orderedRacers);
 
         scores.push({
