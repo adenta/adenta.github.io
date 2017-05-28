@@ -41,50 +41,45 @@ function renderHTML() {
 renderHTML();
 
 var family = [{
-"1": "Munoz",
+"1": "Alonso",
 "3": "Castroneves",
-"6": "Dixon",
+"6": "Power",
 "Name": "Tuttle"
 }, {
-"1": "Pagenaud",
-"3": "Dixon",
-"6": "Montoya",
+"1": "Alonso",
+"3": "Power",
+"6": "Hildebrand",
 "Name": "Andrew"
 }, {
-"1": "Daly",
-"3": "Kanaan",
-"6": "Castroneves",
+"1": "Andretti",
+"3": "Dixon",
+"6": "Kanaan",
 "Name": "Katie"
 }, {
-"1": "Kanaan",
-"3": "Hunter-Reay",
+"1": "Dixon",
+"3": "Carpenter",
+"6": "Alonso",
+"Name": "DeeDee"
+}, {
+"1": "Hunter-Reay",
+"3": "Castroneves",
 "6": "Power",
-"Name": "Mitch"
+"Name": "TeddyAnn"
 }, {
-"1": "Hildebrand",
-"3": "Montoya",
-"6": "Power",
-"Name": "TeriAnn"
+"1": "Montoya",
+"3": "Sato",
+"6": "Kanaan",
+"Name": "Brian"
 }, {
-"1": "Power",
-"3": "Kanaan",
-"6": "Montoya",
-"Name": "Bee"
+"1": "Andretti",
+"3": "Dixon",
+"6": "Castroneves",
+"Name": "Theo Bell"
 }, {
-"1": "Hinchcliffe",
-"3": "Pagenaud",
-"6": "Hunter-Reay",
-"Name": "Lt. Dan"
-}, {
-"1": "Castroneves",
-"3": "Hinchcliffe",
-"6": "Hunter-Reay",
-"Name": "Leenie"
-}, {
-"1": "Newgarden",
-"3": "Rahal",
-"6": "Dixon",
-"Name": "Jackie"
+"1": "Sato",
+"3": "Servia",
+"6": "Rossi",
+"Name": "Ed Jr"
 }];
 
 buisnessLogic = {
@@ -117,7 +112,7 @@ modified: function scoreParticipant(e, orderedRacers) {
 
 //live data at http://racecontrol.indycar.com/xml/timingscoring.json
 //test data at https://enigmatic-shore-70217.herokuapp.com/
-var url = 'https://enigmatic-shore-70217.herokuapp.com/';
+var url = 'http://racecontrol.indycar.com/xml/timingscoring.json';
 function callApi() {
     $.ajax({
         type: 'GET',
@@ -188,7 +183,7 @@ function processResults(d) {
 
 };
 $(document).ready(function() {
-    setInterval(callApi, 500);
+    setInterval(callApi, 2000);
     callApi();
 
     $('#scoringSystem').change(function(){
