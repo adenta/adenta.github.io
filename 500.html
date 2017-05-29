@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 
   <title>Indy 500 Dashboard</title>
-  <meta name="description" content="What is this?">
+  <meta name="description" content="">
 
   <link type="text/css" rel="stylesheet" href=" /assets/materialize/sass/materialize.css">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
@@ -91,7 +91,9 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h2 id="what-is-this">What is this?</h2>
+    <script type="text/javascript" src="/assets/js-embeds/indy500.js"></script>
+
+<h2 id="what-is-this">What is this?</h2>
 
 <p>My family likes to have a contest to see who can get the most predictions right for the Indy 500. I wrote a quick dashboard, and we were able to see in real time who was ‘winning’ based on our picks. This page used to point at the live Indy 500 endpoint, but it is currently switched to a dummy server I set up on Heroku to serve some test data, that we can use next year if we want to modify this. I did not do so well, The guy I picked to win was <a href="http://espn.go.com/racing/indycar/story/_/id/15812395/juan-pablo-montoya-indianapolis-500-crash-lap-64">out</a> at lap 64.</p>
 
@@ -104,9 +106,6 @@
 <h3 id="modified">Modified</h3>
 
 <p>I was playing around with alternative scoring systems, and arrived on something I liked better. In the alternative system seen below, each participant picks who they thought would land in the top three. For each racer a participant chose, we take the total number of racers, and subtract the placing the racer achieved. This gives us a metric with a minimum value of six and a maximum of three times the number of racers. This shows how good each participant is at guessing who will do well in the race. You can see both systems by changing the toggle seen below.</p>
-
-<script type="text/javascript" src="/assets/js-embeds/indy500.js"></script>
-
 
   </div>
 

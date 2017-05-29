@@ -112,7 +112,7 @@ modified: function scoreParticipant(e, orderedRacers) {
 
 //live data at http://racecontrol.indycar.com/xml/timingscoring.json
 //test data at https://enigmatic-shore-70217.herokuapp.com/
-var url = 'http://racecontrol.indycar.com/xml/timingscoring.json';
+var url = 'https://enigmatic-shore-70217.herokuapp.com/';
 function callApi() {
     $.ajax({
         type: 'GET',
@@ -126,7 +126,12 @@ function callApi() {
 
 }
 
-function renderParticipant(e) {
+function renderParticipant(e,out) {
+  Object.keys(e).forEach(function(key){
+    if(out.indexOf(e[key]) > -1){
+      e[key] = "<span style='color:red'>" + e[key] + "</span>";
+    }
+  });
     return "<tr class='collection-item'>" +
         "<td>" + e.name + "</td>" +
         "<td><b>" + e.score + "</b></td>" +
@@ -176,14 +181,14 @@ function processResults(d) {
     scores.sort(function(a, b) {
         return b.score - a.score;
     });
-
+    var crashed = drivers.filter(function(e){ return e.status != "Active"}).map(function(e){return e.lastName;}).join();
     scores.forEach(function(e) {
-        out.innerHTML += renderParticipant(e);
+        out.innerHTML += renderParticipant(e,crashed);
     });
 
 };
 $(document).ready(function() {
-    setInterval(callApi, 2000);
+    setInterval(callApi, 500);
     callApi();
 
     $('#scoringSystem').change(function(){
