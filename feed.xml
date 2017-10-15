@@ -6,15 +6,15 @@
 </description>
     <link>http://denta.co/</link>
     <atom:link href="http://denta.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 May 2017 20:48:27 -0400</pubDate>
-    <lastBuildDate>Sun, 28 May 2017 20:48:27 -0400</lastBuildDate>
+    <pubDate>Sun, 15 Oct 2017 16:42:59 -0700</pubDate>
+    <lastBuildDate>Sun, 15 Oct 2017 16:42:59 -0700</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>Go Finance</title>
         <description>&lt;p&gt;I like to know how I spend my money. I am not a big fan of any of the tools that exist to automate categorizing purchase. I like to assign categories to my purchase manually. I built this tool to remember what category I might have given a transaction in the past. This way, every time I spend money at Kroger, it automatically files the purchase under food:groceries.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 05 Dec 2016 03:45:31 -0500</pubDate>
+        <pubDate>Mon, 05 Dec 2016 00:45:31 -0800</pubDate>
         <link>http://denta.co/go-finance</link>
         <guid isPermaLink="true">http://denta.co/go-finance</guid>
         
@@ -22,69 +22,6 @@
         <category>project</category>
         
         <category>Go</category>
-        
-      </item>
-    
-      <item>
-        <title>Computer History Museum</title>
-        <description>&lt;p&gt;Lots of cool stuff at the Computer History Museum!&lt;/p&gt;
-</description>
-        <pubDate>Sat, 23 Jul 2016 04:45:31 -0400</pubDate>
-        <link>http://denta.co/Computer-History</link>
-        <guid isPermaLink="true">http://denta.co/Computer-History</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Gerrymandering: The Game</title>
-        <description>&lt;p&gt;My &lt;a href=&quot;https://www.linkedin.com/in/mitchel-hill-4205b58b&quot;&gt;sister’s boyfriend&lt;/a&gt; and I had this idea for a game about gerrymandering for a while. I have tried my best to explain it through slides and an HTML5 video demo.&lt;/p&gt;
-
-&lt;p&gt;I think this would be a great tool for the classroom. A quick game that would teach people how gerrymandering works. I have suspended work on this project, until I can find more teachers interested in using this in their classrooms. Feel free to reach out at my contact info in the footer.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 03 Jul 2016 04:45:31 -0400</pubDate>
-        <link>http://denta.co/gerrymandering-the-game</link>
-        <guid isPermaLink="true">http://denta.co/gerrymandering-the-game</guid>
-        
-        
-        <category>project</category>
-        
-        <category>D3.js</category>
-        
-        <category>JavaScript</category>
-        
-        <category>Materialize</category>
-        
-        <category>Gulp</category>
-        
-      </item>
-    
-      <item>
-        <title>Indy 500 Dashboard</title>
-        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;/assets/js-embeds/indy500.js&quot;&gt;&lt;/script&gt;
-
-&lt;h2 id=&quot;what-is-this&quot;&gt;What is this?&lt;/h2&gt;
-
-&lt;p&gt;My family likes to have a contest to see who can get the most predictions right for the Indy 500. I wrote a quick dashboard, and we were able to see in real time who was ‘winning’ based on our picks. This page used to point at the live Indy 500 endpoint, but it is currently switched to a dummy server I set up on Heroku to serve some test data, that we can use next year if we want to modify this. I did not do so well, The guy I picked to win was &lt;a href=&quot;http://espn.go.com/racing/indycar/story/_/id/15812395/juan-pablo-montoya-indianapolis-500-crash-lap-64&quot;&gt;out&lt;/a&gt; at lap 64.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-does-scoring-work&quot;&gt;How does scoring work?&lt;/h2&gt;
-
-&lt;h3 id=&quot;original&quot;&gt;Original&lt;/h3&gt;
-
-&lt;p&gt;For the 2016 Indy 500, you picked three racers. You received six points if you guessed who came in first, three points if you guessed who came in second place or better, and you received one point if you guessed who came in third place or better. This system worked, but is not what the dashboard currently reflects.&lt;/p&gt;
-
-&lt;h3 id=&quot;modified&quot;&gt;Modified&lt;/h3&gt;
-
-&lt;p&gt;I was playing around with alternative scoring systems, and arrived on something I liked better. In the alternative system seen below, each participant picks who they thought would land in the top three. For each racer a participant chose, we take the total number of racers, and subtract the placing the racer achieved. This gives us a metric with a minimum value of six and a maximum of three times the number of racers. This shows how good each participant is at guessing who will do well in the race. You can see both systems by changing the toggle seen below.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 29 May 2016 04:45:31 -0400</pubDate>
-        <link>http://denta.co/500</link>
-        <guid isPermaLink="true">http://denta.co/500</guid>
-        
-        
-        <category>Javascript</category>
-        
-        <category>hidden</category>
         
       </item>
     
@@ -109,7 +46,7 @@
 
 &lt;p&gt;EDIT: The github repository is located &lt;a href=&quot;https://github.com/adenta/Mario-Chase-Theatre&quot;&gt;here&lt;/a&gt;. The system was designed to model mario chase as simply as possible. We render the maps, and than we save them as JSON. We than made a quick node server to fetch these data files, and &lt;em&gt;view&lt;/em&gt; them in browser.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 08 May 2016 04:45:31 -0400</pubDate>
+        <pubDate>Sun, 08 May 2016 01:45:31 -0700</pubDate>
         <link>http://denta.co/mario-chase</link>
         <guid isPermaLink="true">http://denta.co/mario-chase</guid>
         
@@ -163,7 +100,7 @@ this might work in this illustration:&lt;/p&gt;
 
 &lt;p&gt;For my sake, I saved unopposed elections with a flag of 0. I gave missing elections a flag of -1. I see this was a bad decision for others to use my data. I should have saved the flags as strings, leaving unopposed elections alone. This would have been more semantic. This would have also prevented people from doing some bad math, treating the -1’s and 0’s as literal values.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 06 May 2016 02:45:31 -0400</pubDate>
+        <pubDate>Thu, 05 May 2016 23:45:31 -0700</pubDate>
         <link>http://denta.co/gerrymandering</link>
         <guid isPermaLink="true">http://denta.co/gerrymandering</guid>
         
@@ -198,7 +135,7 @@ git push -u origin master
 
 &lt;p&gt;And thats it! If you did not recieve error messages, you should see your repository on your Github Account!&lt;/p&gt;
 </description>
-        <pubDate>Thu, 05 May 2016 05:15:31 -0400</pubDate>
+        <pubDate>Thu, 05 May 2016 02:15:31 -0700</pubDate>
         <link>http://denta.co/git-part-four-pushing</link>
         <guid isPermaLink="true">http://denta.co/git-part-four-pushing</guid>
         
@@ -234,7 +171,7 @@ At this screen, give your repository a name, and hit ‘Create Repository’. No
 
 &lt;p&gt;Once the keys are added, you should be ready to push your repo to Github!&lt;/p&gt;
 </description>
-        <pubDate>Wed, 04 May 2016 05:15:31 -0400</pubDate>
+        <pubDate>Wed, 04 May 2016 02:15:31 -0700</pubDate>
         <link>http://denta.co/git-part-three-remote-repo</link>
         <guid isPermaLink="true">http://denta.co/git-part-three-remote-repo</guid>
         
@@ -302,7 +239,7 @@ $(window).load(function() {
 
 &lt;p&gt;The file would than be removed from our repo, and staged to be deleted. However; sometimes we delete files manually. If you delete a file from your file explorer, git will not recognize that you wanted to delete the file from your repo. The file would stay in your repo, as the deletion was never staged. You can fix this by doing the same ‘git rm’ command as seen above, or when you add all of your other files, you can use ‘git add -u’ to ‘update’ your repository to the current structure. The ‘u’ stands for update, if I was too subtle.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 03 May 2016 05:15:31 -0400</pubDate>
+        <pubDate>Tue, 03 May 2016 02:15:31 -0700</pubDate>
         <link>http://denta.co/git-part-two-commiting</link>
         <guid isPermaLink="true">http://denta.co/git-part-two-commiting</guid>
         
@@ -410,7 +347,7 @@ git checkout -b yourUsername 2051bcb3981ad3b9efaa73e3096c647513bbe4cb&lt;/code&g
 
 &lt;p&gt;This recursively adds all untracked files in the current git repository. If I made changes to the ‘index.html’ and the ‘style.css’ files, I could add them both by typing ‘git add .’.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 01 May 2016 05:00:31 -0400</pubDate>
+        <pubDate>Sun, 01 May 2016 02:00:31 -0700</pubDate>
         <link>http://denta.co/git-part-one-adding-files</link>
         <guid isPermaLink="true">http://denta.co/git-part-one-adding-files</guid>
         
@@ -418,6 +355,215 @@ git checkout -b yourUsername 2051bcb3981ad3b9efaa73e3096c647513bbe4cb&lt;/code&g
         <category>series</category>
         
         <category>git</category>
+        
+      </item>
+    
+      <item>
+        <title>Shell Commands Crash Course</title>
+        <description>&lt;h2 id=&quot;what-is-a-shell&quot;&gt;What is a Shell&lt;/h2&gt;
+
+&lt;p&gt;A shell is a tool we use to interact with a computer. It is pretty powerful. There are a few basic commands that will help you navigate the computer using a shell.&lt;/p&gt;
+
+&lt;h2 id=&quot;frequently-used-shell-commands&quot;&gt;Frequently Used Shell Commands&lt;/h2&gt;
+
+&lt;h3 id=&quot;ls&quot;&gt;ls&lt;/h3&gt;
+
+&lt;p&gt;ls is a command that lists all files in the current directory. If you had a directory that had three files in it, file1.txt, file2.txt, and file3.txt, and you ran ls, you would see something like:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~# ls
+    file1.txt  file2.txt  file3.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;cd&quot;&gt;cd&lt;/h3&gt;
+
+&lt;p&gt;cd is a command that changes what directory you are currently in. If you are currently in directory A, and want to go up one level, you would use ‘../’ as the directory you want to change to. For example, if you have a folder called ‘Downloads’, you could access that directory contents by running cd Downloads:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~# &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;Downloads/
+    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~/Downloads#&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;mkdir&quot;&gt;mkdir&lt;/h3&gt;
+
+&lt;p&gt;mkdir is a command that creates a new directory. For example, to create a new directory called ‘files’ you would run ‘mkdir files’ as seen here:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~# ls         
+    Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~# mkdir files
+    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~# ls
+    Desktop    Downloads  Pictures  Templates  files
+    Documents  Music      Public    Videos&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;nano&quot;&gt;nano&lt;/h3&gt;
+
+&lt;p&gt;nano opens a file in the nano text editor. If you want to create a file, you can run nano to create that file, and open it.&lt;/p&gt;
+
+&lt;p&gt;We can see a demo of nano in action in the below demonstration.&lt;/p&gt;
+
+&lt;h3 id=&quot;cat&quot;&gt;cat&lt;/h3&gt;
+
+&lt;p&gt;cat prints the contents of a file. If we have a file named ‘file.txt’ which contains the words ‘this is a file’, we can see its contents using cat.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;(trusty)root@localhost:~# &lt;/span&gt;ls
+Desktop    Downloads  Music     Public     Videos
+Documents  file.txt   Pictures  Templates
+&lt;span class=&quot;gp&quot;&gt;(trusty)root@localhost:~# &lt;/span&gt;cat file.txt
+this is a file&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;rm&quot;&gt;rm&lt;/h3&gt;
+
+&lt;p&gt;rm is a dangerous command. It removes files. If we have a text file named ‘file.txt’ we can remove it with rm:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;(trusty)root@localhost:~# &lt;/span&gt;ls
+Desktop    Downloads  Music     Public     Videos
+Documents  file.txt   Pictures  Templates
+&lt;span class=&quot;gp&quot;&gt;(trusty)root@localhost:~# &lt;/span&gt;rm file.txt
+&lt;span class=&quot;gp&quot;&gt;(trusty)root@localhost:~# &lt;/span&gt;ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;trusty&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;root@localhost:~#&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;demonstration&quot;&gt;Demonstration&lt;/h2&gt;
+
+&lt;p&gt;Here is a short demo making use of all of these commands.&lt;/p&gt;
+
+&lt;div&gt;&lt;b&gt;This terminal recording can be found at &lt;a href=&quot;https://asciinema.org/a/34tyjhehmftwo04lbpekw3f4d&quot;&gt; asciinema.org&lt;/a&gt;.&lt;/b&gt;&lt;/div&gt;
+
+&lt;div class=&quot;hide-on-large-only&quot;&gt;
+  &lt;a href=&quot;https://asciinema.org/a/34tyjhehmftwo04lbpekw3f4d&quot;&gt;&lt;img class=&quot;responsive-img&quot; src=&quot;https://asciinema.org/a/34tyjhehmftwo04lbpekw3f4d.png&quot; width=&quot;836&quot; /&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+&lt;div id=&quot;asciinemaContainer&quot; class=&quot;center-align hide-on-med-and-down &quot;&gt;
+  &lt;div id=&quot;asciiLoader&quot; class=&quot;preloader-wrapper big active&quot;&gt;
+    &lt;div class=&quot;spinner-layer&quot;&gt;
+      &lt;div class=&quot;circle-clipper left&quot;&gt;
+        &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;&lt;div class=&quot;gap-patch&quot;&gt;
+        &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;&lt;div class=&quot;circle-clipper right&quot;&gt;
+        &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://asciinema.org/a/34tyjhehmftwo04lbpekw3f4d.js&quot; id=&quot;asciicast-34tyjhehmftwo04lbpekw3f4d&quot; async=&quot;&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(window).load(function() {
+
+  $(&quot;#asciiLoader&quot;).hide();
+
+ });
+
+
+
+&lt;/script&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 01 May 2016 01:50:31 -0700</pubDate>
+        <link>http://denta.co/shell-demo</link>
+        <guid isPermaLink="true">http://denta.co/shell-demo</guid>
+        
+        
+        <category>series</category>
+        
+        <category>git</category>
+        
+      </item>
+    
+      <item>
+        <title>Intro to Git</title>
+        <description>&lt;p&gt;Welcome to the first part of the ServeIT Github tutorial. This will be fast and painless.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-git&quot;&gt;What is Git?&lt;/h2&gt;
+&lt;p&gt;Git is version control software. When you have many people working on a project, you need a way to track files. Git helps facilitate many people to work on the same project at the same time.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-do-i-need-to-use-it&quot;&gt;Why do I need to use it?&lt;/h2&gt;
+&lt;p&gt;At Serve IT, we use Git to manage &amp;amp; deploy our projects. It is easier to type ‘git clone’ and have a bunch of files suddenly appear on your computer, than it would be to copy them manually. It is also be easier to type ‘git push’ than it is to manually use something like FTP to make changes to an application server.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-do-i-get-it-set-up&quot;&gt;How do I get it set up?&lt;/h2&gt;
+&lt;p&gt;This tutorial is about how to use git effectively, not how to install it on your computer. If you need to install git, &lt;a href=&quot;https://help.github.com/articles/set-up-git/&quot;&gt;start here&lt;/a&gt;. Windows Users will need to use their command prompt. Mac and Linux users will use their Terminal.&lt;/p&gt;
+
+&lt;p&gt;This tutorial will serve as a basic introduction to Git. This tutorial will not cover &lt;a href=&quot;https://desktop.github.com/&quot;&gt;Github Desktop&lt;/a&gt;. This is a graphic interface for Git. This is a useful tool, but not the purpose of this tutorial.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;We will cover:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Cloning, Adding, &amp;amp; Staging files&lt;/li&gt;
+  &lt;li&gt;Committing and Removing files&lt;/li&gt;
+  &lt;li&gt;Setting up remote repositories.&lt;/li&gt;
+  &lt;li&gt;Pushing to repositories&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;cheatsheet&quot;&gt;Cheatsheet&lt;/h2&gt;
+&lt;p&gt;For additional help, check out &lt;a href=&quot;https://gist.github.com/richardcornish/4676556&quot;&gt;this&lt;/a&gt; website.&lt;/p&gt;
+
+&lt;p&gt;At this point, you should have git installed on your system. Run this command. You should get some sort of version number back.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For me, when I run this command, I see ‘git version 1.9.1’ as the output on the terminal. Make sure this command works before proceeding.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 May 2016 01:45:31 -0700</pubDate>
+        <link>http://denta.co/git-intro</link>
+        <guid isPermaLink="true">http://denta.co/git-intro</guid>
+        
+        
+        <category>series</category>
+        
+        <category>git</category>
+        
+        <category>ServeIT</category>
+        
+      </item>
+    
+      <item>
+        <title>Sat Solver</title>
+        <description>&lt;p&gt;Today in class my professor was describing &lt;a href=&quot;http://nrich.maths.org/781/note&quot;&gt;this&lt;/a&gt; problem. We thought about it for a while, and than he started describing the brute force solution. His code was six nested for loops. I assumed there had to be a better way to represent this problem, so I wrote a script to solve this and other similar problems.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sets&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;itertools&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;permutations&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;makeWord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prompt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;raw_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prompt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;letter&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;letter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;makeWord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; First: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;makeWord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Second: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;makeWord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Answer: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;probVars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;trials&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;permutations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;probVars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;probVars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;letters in total, &amp;amp;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trials&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; permutations.&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trial&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trials&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buildNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;builtList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;letter&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;builtList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;problem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;letter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;builtList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;problem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;probVars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))}&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;firstNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buildNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;secondNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buildNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;answerNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buildNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answerNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;problem&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I am happy with the solution I arrived at, other than two small points. I wish I could get out of the habit of thinking of lists in terms of their indexes. You can see on line 37 where I am generating each mapping of numbers to letters, my dictionary comprehension relies on ‘range(len(trial))’. This solution also runs in n! time, but that is just because of how &lt;em&gt;hard&lt;/em&gt; of a problem it is.&lt;/p&gt;
+
+&lt;p&gt;This problem is &lt;a href=&quot;https://en.wikipedia.org/wiki/NP-completeness&quot;&gt;NP-Complete&lt;/a&gt;. This explains why it has such a high complexity. It is important to note that this problem is bounded where n&amp;lt;10, as you can only have that many unique letters representing unique numbers.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Mar 2016 18:45:31 -0700</pubDate>
+        <link>http://denta.co/sat-solver</link>
+        <guid isPermaLink="true">http://denta.co/sat-solver</guid>
+        
+        
+        <category>python</category>
         
       </item>
     
