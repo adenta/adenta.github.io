@@ -1,6 +1,9 @@
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1 user-scalable=no"
+    />
     <title>Andrew Denta's personal homepage</title>
     <style>
       body {
@@ -8,14 +11,19 @@
         font-family: "Courier New", Courier, monospace;
         color: yellow;
         background: url("./stars.gif");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      main {
         max-width: 800px;
-        margin: 0 auto; /* this centers the contents on the page */
       }
 
       a {
-        color:aqua
+        color: aqua;
       }
-
 
       hr {
         border: none;
@@ -34,39 +42,45 @@
       }
     </style>
   </head>
-  <h1>Andrew Denta's personal homepage</h1>
-  <hr />
+  <body>
+    <main>
+      <h1>Andrew Denta's personal homepage</h1>
+      <hr />
 
-  <h2>About me</h2>
-  <p>
-    Hi, I'm Andrew, an Applications Developer based in San Francisco,
-    California. I try not to take life <i>too</i> seriously. I also am pretty
-    good at making balloon animals.
-  </p>
-  <div class="flex">
-    <img src="./headshot.jpg" />
-  </div>
+      <h2>About me</h2>
+      <p>
+        Hi, I'm Andrew, an Applications Developer based in San Francisco,
+        California. I try not to take life <i>too</i> seriously. I'm also pretty
+        good at making balloon animals.
+      </p>
+      <div class="flex">
+        <img src="./headshot.jpg" />
+      </div>
 
-  <h2>Links</h2>
-  <ul>
-    <li>
-      <a href="https://terusama.com" rel="nofollow">Terusama</a>- The best
-      software for scheduling dock times at warehouses. It dosen't look like
-      trash I swear.
-    </li>
-    <li>
-      <a href="https://github.com/adenta" rel="nofollow">Github</a>- Over the
-      years I've put some code on Github available to the public. It's more or
-      less all abandoned, but hey, one mans trash is another mans treasure.
-    </li>
-    <li>
-      <a href="https://linkedin.com/in/adenta" rel="nofollow">Linkedin</a>- A
-      place where you can waste time, while pretending to work. This is
-      different from reddit, becasue you might <i>feel</i> like you are working.
-    </li>
-    <li>
-      <a href="https://vistaserv.net/" rel="nofollow">Vistaserv</a>- Inspiration
-      for this, amazing website.
-    </li>
-  </ul>
+      <h2>Links</h2>
+      <ul>
+        <li>
+          <a href="https://terusama.com" rel="nofollow">Terusama</a>- The best
+          software for scheduling dock times at warehouses. It dosen't look like
+          trash I swear.
+        </li>
+        <li>
+          <a href="https://github.com/adenta" rel="nofollow">Github</a>- Over
+          the years I've put some code on Github available to the public. It's
+          more or less all abandoned, but hey, one mans trash is another mans
+          treasure.
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/adenta" rel="nofollow">Linkedin</a>-
+          A place where you can waste time, while pretending to work. This is
+          different from reddit, becasue you might <i>feel</i> like you are
+          working.
+        </li>
+        <li>
+          <a href="https://vistaserv.net/" rel="nofollow">Vistaserv</a>-
+          Inspiration for this, amazing website.
+        </li>
+      </ul>
+    </main>
+  </body>
 </html>
